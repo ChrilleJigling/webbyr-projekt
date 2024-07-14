@@ -1,3 +1,43 @@
+:root {
+    --MAIN-COLOR:#252e43;
+    --SECONDARY-COLOR:#252e43;
+    --THIRD-COLOR:#252e43;;
+    --BIG-TEXT:60px;
+    --MEDIUM-TEXT:28px;
+    --SMALL-TEXT:20px;
+    --SMALLEST-TEXT:16px;
+    --FONT-FAMILY: 'Arial, sans-serif'; 
+    --PADDING: 10px;
+    --MARGIN: 5px;
+}
+
+h1, h2 {
+    font-size:var(--BIG-TEXT);
+    margin:var(--MARGIN);
+}
+
+h3 {
+    font-size:var(--MEDIUM-TEXT);
+    margin:var(--MARGIN);
+}
+
+p {
+    font-size:var(--SMALL-TEXT);
+    margin:var(--MARGIN);
+}
+
+/* @media only screen and (max-width: 1026px) {
+    :root {
+        --BIG-TEXT:28px;
+        --MEDIUM-TEXT:20px;
+        --SMALL-TEXT:14px;
+        --FONT-FAMILY: 'Arial, sans-serif'; 
+        --PADDING: 10px;
+        --MARGIN: 10px;
+    }
+    
+} */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,16 +45,55 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+section {
+    padding: 2rem 0;
 }
+
+.half-section {
+    width:50%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.half-section-inner-div{
+    width:80%;
+}
+
+.small-text {
+    font-size: var(--SMALL-TEXT);
+    font-weight: bold;
+    color:white;
+}
+
+/* =============== NAV ================ */
+
 
 header {
     background: #333;
     color: #fff;
     padding: 1rem 0;
+    color:var(--GREEN)
+}
+
+nav {
+    width: 80%;
+    height:80px;
+    margin: auto;
+    overflow: hidden;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    height:100%;
+    margin: auto;
+    overflow: hidden;
+    display:flex;
+    max-width:1500px;
 }
 
 header h1 {
@@ -38,19 +117,37 @@ nav ul li a {
     text-decoration: none;
 }
 
-.hero {
-    background: #f4f4f4;
-    padding: 2rem 0;
-    text-align: center;
+/* ============= END OF NAV ============== */
+
+
+
+
+/* =============== LANDING PAGE ================ */
+main {
+    height:80vh;
+    background-color:var(--MAIN-COLOR);
+    margin:0;
 }
 
-section {
-    padding: 2rem 0;
+
+#background-image {
+    width:90%;
+    height:auto;
+    border-radius:15px;
 }
 
+
+/* =============== END OF LANDING PAGE ================ */
+
+
+
+
+/* =============== FOOTER ================ */
 footer {
     background: #333;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
 }
+
+/* =============== END OF LANDING PAGE ================ */
