@@ -3,12 +3,14 @@
     --SECONDARY-COLOR:#252e43;
     --THIRD-COLOR:#252e43;;
     --BIG-TEXT:60px;
-    --MEDIUM-TEXT:28px;
+    --MEDIUM-TEXT:24px;
     --SMALL-TEXT:20px;
     --SMALLEST-TEXT:16px;
     --FONT-FAMILY: 'Arial, sans-serif'; 
     --PADDING: 10px;
     --MARGIN: 5px;
+    --BIG-MARGIN:30px;
+    --BORDER-RADIUS:30px;
 }
 
 h1, h2 {
@@ -24,6 +26,21 @@ h3 {
 p {
     font-size:var(--SMALL-TEXT);
     margin:var(--MARGIN);
+}
+
+.logo-text {
+    font-size:var(--MEDIUM-TEXT);
+    color:black;
+}
+
+.small-text {
+    font-size: var(--SMALL-TEXT);
+    font-weight: bold;
+    color:white;
+}
+
+.black-text {
+    color:black;
 }
 
 /* @media only screen and (max-width: 1026px) {
@@ -61,20 +78,95 @@ section {
     width:80%;
 }
 
-.small-text {
-    font-size: var(--SMALL-TEXT);
-    font-weight: bold;
-    color:white;
+.container {
+    width: 80%;
+    height:100%;
+    margin: auto;
+    overflow: hidden;
+    display:flex;
+    max-width:1500px;
 }
+
+
+
+
+
+/* =============== BUTTONS  ================ */
+
+.button-container {
+    display:flex;
+    margin-top:var(--BIG-MARGIN);
+}
+
+.button {
+    width:240px;
+    height: 60px;
+    line-height:50px;
+    border-radius:var(--BORDER-RADIUS);
+    font-size: 18px;
+    background-color:#4287f5;
+    color:white;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.button:hover {
+   animation: bounce 0.5s ease;
+   cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-7px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.second-button {
+    margin-left:10px;
+    background-color: #f52525;
+}
+
+.arrow-icon {
+    height:60%;
+    width:auto;
+    margin-left:20px;
+    align-self: center;
+    justify-self: center;
+}
+
+/* =========== END OF BUTTONS =========== */
+
+
 
 /* =============== NAV ================ */
 
-
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    color:var(--GREEN)
+    background-color: transparent;
+    color: white;
+    padding: var(--padding);
+    z-index:10;
+    position: absolute;
+    top:0;
+    width:100%;
+    right:0;
+}
+
+#logo {
+    height:100%;
+    width:auto;
 }
 
 nav {
@@ -85,15 +177,6 @@ nav {
     display:flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.container {
-    width: 80%;
-    height:100%;
-    margin: auto;
-    overflow: hidden;
-    display:flex;
-    max-width:1500px;
 }
 
 header h1 {
@@ -113,8 +196,101 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
+    position: relative;
+    font-size: var(--SMALL-TEXT);
+    padding: 0.2rem 0;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.hero {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Media Queries */
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    header {
+        text-align: left;
+        padding: 20px;
+    }
+
+    nav ul {
+        text-align: left;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 1rem 0;
+    }
+}
+
+/* Medium devices (tablets, 600px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .hero {
+        padding: 1.5rem 0;
+    }
+}
+
+/* Large devices (laptops/desktops, 769px and up) */
+@media only screen and (min-width: 769px) {
+    .container {
+        width: 80%;
+    }
+
+    .hero {
+        padding: 2rem 0;
+    }
 }
 
 /* ============= END OF NAV ============== */
@@ -124,21 +300,40 @@ nav ul li a {
 
 /* =============== LANDING PAGE ================ */
 main {
-    height:80vh;
-    background-color:var(--MAIN-COLOR);
-    margin:0;
+    height: 90vh;
+    width: 100%;
+    background-color: var(--MAIN-COLOR);
+    margin: 0;
+    position: relative;
 }
 
 
 #background-image {
     width:90%;
     height:auto;
-    border-radius:15px;
+    border-radius:var(--BORDER-RADIUS);
 }
 
 
 /* =============== END OF LANDING PAGE ================ */
 
+
+
+
+/* =============== SERVICES ================ */
+.services-container {
+    display:flex;
+    margin:var(--BIG-MARGIN) 0;
+}
+
+.services-container > img {
+    width:auto;
+    height:100px;
+    margin-right:var(--BIG-MARGIN);
+}
+
+
+/* =========== END OF SERVICES =========== */
 
 
 
@@ -151,3 +346,4 @@ footer {
 }
 
 /* =============== END OF LANDING PAGE ================ */
+

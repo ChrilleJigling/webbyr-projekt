@@ -3,34 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern HTML Layout</title>
+    <title>CrispDesigns</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
 </head>
 <body>
     <header>
         <nav>
-            <h2>TK Webbyrå</h2>
+            <img id="logo" src="./images/logo.png" alt="logo">
             <ul>
                 <li><a href="#home">Home</a></li>
+                <li><a href="#services">Projects</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Landing Page -->
-    <main>
+    <main id="home">
         <!-- Container -->
         <div class="container">
             <!-- Text -->
             <div class="half-section">
                 <div class="half-section-inner-div">
+                    <!-- H1 - Main Header -->
                     <h1 style="color:white;">Webbyrå I Tullange</h1>
+                    <!-- Secondary Text - Description  -->
                     <p class="small-text">
                         Fullservice webbyrå i Stockholm med spetskompetens inom WordPress, paid social och SEO. 
                         Vi hjälper er att skapa nya affärer genom affärsdrivande webbplatser och digital synlighet.
                     </p>
+                    <!-- Buttons Container -->
+                    <div class="button-container">
+                        <a class="button">
+                            <span>Kostnadsfri Offert</span>
+                            <img class="arrow-icon" src="./images/arrow-icon.png" alt="arrow-icon">
+                        </a>
+                        <a class="button second-button">
+                            <span>Våra tjänster</span>
+                            <img class="arrow-icon" src="./images/arrow-icon-red.png" alt="arrow-icon">
+                        </a>
+                    </div>
+
                 </div>
             </div>
 
@@ -39,8 +53,58 @@
                 <img id="background-image" src="./images/landing.jpg" alt="background image computer">
             </div>
         </div>
-     
     </main>
+
+    <section id="about">
+        <div class="container">
+            <div class="half-section">
+                <div class="half-section-inner-div">
+                    <!-- H1 - Main Header -->
+                    <h2>Webbyrå I Tullange</h2>
+                    <!-- Secondary Text - Description  -->
+                    <p class="small-text black-text">
+                        Vi erbjuder allt från nyskapande hemsidor eller uppdatering av eran befintliga hemsida till effektiv marknadsföring och sökmotoroptimering. 
+                        Kontakta oss för en heltäckande analys av eran hemsida och en kostnadsfri offert eller kontakta oss med erat behov så löser vi det. Välkommen!              
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Services section / what we have to offer -->
+            <div class="half-section">
+                <div class="services-container">
+                    <img src="./images/icons/websiteIcon.png" alt="website icon"> 
+                    <div>
+                        <h3>Nya hemsidor</h3>
+                        <p>Vi skapar helt nya hemsidor med anpassad design efter erat behov.</p>   
+                    </div>
+                </div>
+    
+                <div class="services-container">
+                    <img src="./images/icons/refreshIcon.png" alt="web update icon">
+                    <div>
+                        <h3>Uppdatering av befintlig hemsida</h3>
+                        <p>Vi konverterar eran befintliga hemsida så den blir modern. Vi tar en titt på eran befintliga hemsida och sedan kommer vi överrens om vad som ska göras.</p>  
+                    </div>
+                </div>
+    
+                <div class="services-container">
+                    <img src="./images/icons/seoIcon.png" alt="seo icon">
+                    <div>
+                        <h3>SEO - Optimering</h3>
+                        <p>Vi sökmotorsoptimerar eran hemsida efter den moderna standarden, vi höjer eran rankning på anpassade nyckelord efter erat behov.</p>
+                    </div>
+                </div>
+    
+                <div class="services-container">
+                    <img src="./images/icons/analyticsIcon.png" alt="seo icon">
+                    <div>
+                        <h3>Analysverktyg som Google Analytics & Google Tag Manager</h3>
+                        <p>Vi lägger till analysverktyg som Google Analytics 4 och Google Tag Manager, vi kan även lägga in anpassade konverteringar efter erat behov.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2024 Your Name. All rights reserved.</p>
