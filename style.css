@@ -1,6 +1,6 @@
 :root {
     --MAIN-COLOR:#252e43;
-    --SECONDARY-COLOR:#06070A;
+    --SECONDARY-COLOR:rgba(0,0,0,1);
     --THIRD-COLOR:#252e43;
     --TEXT-COLOR:rgba(255,255,255,1);
     --BIG-TEXT:50px;
@@ -97,7 +97,11 @@ section {
 }
 
 .half-section-inner-div{
-    width:80%;
+    width: 80%;
+    padding: 50px;
+    background-color: rgba(128, 20, 38,0.8);
+    border-radius:15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.7);
 }
 
 .container {
