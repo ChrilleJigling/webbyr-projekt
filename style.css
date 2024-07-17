@@ -1,10 +1,10 @@
 :root {
     --MAIN-COLOR:#252e43;
-    --SECONDARY-COLOR:#252e43;
+    --SECONDARY-COLOR:#06070A;
     --THIRD-COLOR:#252e43;
-    --TEXT-COLOR:rgba(255,255,255,0.8);
-    --BIG-TEXT:60px;
-    --MEDIUM-TEXT:24px;
+    --TEXT-COLOR:rgba(255,255,255,1);
+    --BIG-TEXT:50px;
+    --MEDIUM-TEXT:28px;
     --SMALL-TEXT:20px;
     --SMALLEST-TEXT:16px;
     --FONT-FAMILY: 'Arial, sans-serif'; 
@@ -30,7 +30,16 @@ body {
     background-color:var(--MAIN-COLOR);
 }
 
-h1, h2 {
+h1 {
+    font-size:100px;
+    margin:var(--MARGIN);
+    line-height:110%;
+    opacity: 0; /* Start with invisible text */
+    animation: fadeInUp 2.5s ease-in-out forwards; /* Apply the animation */
+    animation-delay: 0.7s; /* Start animation after h1 is done */
+}
+
+h2 {
     font-size:var(--BIG-TEXT);
     margin:var(--MARGIN);
     line-height:110%;
@@ -57,15 +66,14 @@ a:focus {
     color:rgba(255,255,255,0.1);
 }
 
-.logo-text {
-    font-size:var(--MEDIUM-TEXT);
-}
-
 .small-text {
     font-size: var(--SMALL-TEXT);
     font-weight: bold;
 }
 
+section {
+    padding:10vh 0;
+}
 
 /* @media only screen and (max-width: 1026px) {
     :root {
@@ -79,11 +87,6 @@ a:focus {
     
 } */
 
-
-
-section {
-    padding: 2rem 0;
-}
 
 .half-section {
     width:50%;
@@ -239,9 +242,11 @@ nav ul li a::after {
     height: 2px;
     bottom: 0;
     left: 0;
+    background-color: var(--TEXT-COLOR);
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
+    z-index: 10;
 }
 
 nav ul li a:hover::after {
@@ -316,13 +321,52 @@ main {
     background-color: var(--MAIN-COLOR);
     margin: 0;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.centered-text-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width:70%;
+    height:auto;
+    z-index:10;
+}
 
 #background-image {
     width:90%;
     height:auto;
     border-radius:var(--BORDER-RADIUS);
+}
+
+#secondary-text {
+    font-size: var(--MEDIUM-TEXT);
+    opacity:0;
+    animation: fadeInUp 3s ease-in-out forwards; /* Optional animation for paragraph */
+    animation-delay: 2s; /* Start animation after h1 is done */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Start 50px below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the original position */
+    }
 }
 
 
@@ -334,8 +378,7 @@ main {
 /* =============== SERVICES ================ */
 
 #services {
-    margin-top:10vh;
-    background-color: var(--MAIN-COLOR);
+    background-color: var(--SECONDARY-COLOR);
 }
 
 .services-container {
@@ -454,3 +497,49 @@ footer {
 
 /* =============== END OF LANDING PAGE ================ */
 
+.blurred-background {
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    backdrop-filter: blur(1px); /* Adjust blur level as needed */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+    z-index: 10; /* Ensure it is above the video but below content */
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 5;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay for better text readability */
+}

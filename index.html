@@ -23,37 +23,18 @@
     <!-- Landing Page -->
     <main id="home">
         <!-- Container -->
-        <div class="container">
-            <!-- Text -->
-            <div class="half-section">
-                <div class="half-section-inner-div">
-                    <!-- H1 - Main Header -->
-                    <h1>Webbyrå I Tullange</h1>
-                    <!-- Secondary Text - Description  -->
-                    <p class="small-text">
-                        Fullservice webbyrå i Stockholm med spetskompetens inom WordPress, paid social och SEO. 
-                        Vi hjälper er att skapa nya affärer genom affärsdrivande webbplatser och digital synlighet.
-                    </p>
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                        <a class="button">
-                            <span>Kostnadsfri Offert</span>
-                            <img class="arrow-icon" src="./images/arrow-icon.png" alt="arrow-icon">
-                        </a>
-                        <a class="button second-button">
-                            <span>Våra tjänster</span>
-                            <img class="arrow-icon" src="./images/arrow-icon-red.png" alt="arrow-icon">
-                        </a>
-                    </div>
-
-                </div>
+            <div class="video-background">
+                <video id="background-video" autoplay loop muted>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="blurred-background"></div>
             </div>
 
-            <!-- Image -->
-            <div class="half-section">
-                <img id="background-image" src="./images/landing.jpg" alt="background image computer">
+            <div class="centered-text-container">
+                <h1>Webbyrå i Stockholm</h1>
+                <p id="secondary-text">Vårat mål är att leverera snabba och billiga hemsidor med noll kompensation i kvalitén. </p>
             </div>
-        </div>
     </main>
 
     <section id="services">
@@ -138,6 +119,6 @@
         <p><a href="#home">Hem</a> | <a href="#contact">Kontakta oss</a> | <a href="#portfolio">Portfolio</a></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="functions.js"></script>
 </body>
 </html>
