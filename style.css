@@ -8,19 +8,22 @@
     --SMALLEST-TEXT:16px;
     --FONT-FAMILY: 'Arial, sans-serif'; 
     --PADDING: 10px;
-    --MARGIN: 5px;
-    --BIG-MARGIN:30px;
+    --MARGIN: 10px;
+    --BIG-MARGIN:20px;
+    --BIGGEST-MARGIN:40px;
     --BORDER-RADIUS:30px;
 }
 
 h1, h2 {
     font-size:var(--BIG-TEXT);
     margin:var(--MARGIN);
+    line-height:110%;
 }
 
 h3 {
     font-size:var(--MEDIUM-TEXT);
     margin:var(--MARGIN);
+    line-height:110%;
 }
 
 p {
@@ -88,14 +91,11 @@ section {
 }
 
 
-
-
-
 /* =============== BUTTONS  ================ */
 
 .button-container {
     display:flex;
-    margin-top:var(--BIG-MARGIN);
+    margin-top:var(--BIGGEST-MARGIN);
 }
 
 .button {
@@ -150,7 +150,6 @@ section {
 /* =========== END OF BUTTONS =========== */
 
 
-
 /* =============== NAV ================ */
 
 header {
@@ -165,7 +164,7 @@ header {
 }
 
 #logo {
-    height:100%;
+    height:60%;
     width:auto;
 }
 
@@ -321,6 +320,11 @@ main {
 
 
 /* =============== SERVICES ================ */
+
+#about {
+    margin-top:10vh;
+}
+
 .services-container {
     display:flex;
     margin:var(--BIG-MARGIN) 0;
