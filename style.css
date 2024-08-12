@@ -1,7 +1,7 @@
 :root {
     --MAIN-COLOR:#252e43;
     --SECONDARY-COLOR:rgba(0,0,0,1);
-    --THIRD-COLOR:#252e43;
+    --BTN-COLOR:#188bf6;
     --TEXT-COLOR:rgba(255,255,255,1);
     --BIG-TEXT:50px;
     --MEDIUM-TEXT:28px;
@@ -9,10 +9,10 @@
     --SMALLEST-TEXT:16px;
     --FONT-FAMILY: 'Arial, sans-serif'; 
     --PADDING: 10px;
-    --MARGIN: 10px;
+    --MARGIN: 15px;
     --BIG-MARGIN:20px;
     --BIGGEST-MARGIN:40px;
-    --BORDER-RADIUS:30px;
+    --BORDER-RADIUS:11px;
 }
 
 * {
@@ -31,12 +31,12 @@ body {
 }
 
 h1 {
-    font-size:100px;
+    font-size:80px;
     margin:var(--MARGIN);
-    line-height:110%;
+    line-height:100%;
     opacity: 0; /* Start with invisible text */
-    animation: fadeInUp 2.5s ease-in-out forwards; /* Apply the animation */
-    animation-delay: 0.7s; /* Start animation after h1 is done */
+    animation: fadeInUp 1.5s ease-in-out forwards; /* Apply the animation */
+    animation-delay: 0.2s; /* Start animation after h1 is done */
 }
 
 h2 {
@@ -66,13 +66,12 @@ a:focus {
     color:rgba(255,255,255,0.1);
 }
 
-.small-text {
-    font-size: var(--SMALL-TEXT);
-    font-weight: bold;
-}
-
 section {
     padding:10vh 0;
+}
+
+.big-margin {
+    margin:var(--BIG-MARGIN);
 }
 
 /* @media only screen and (max-width: 1026px) {
@@ -99,9 +98,6 @@ section {
 .half-section-inner-div{
     width: 80%;
     padding: 50px;
-    background-color: rgba(128, 20, 38,0.8);
-    border-radius:15px;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.7);
 }
 
 .container {
@@ -121,13 +117,39 @@ section {
     margin-top:var(--BIGGEST-MARGIN);
 }
 
+.discount-button {
+    width:390px;
+    height: 55px;
+    line-height:50px;
+    border-radius:var(--BORDER-RADIUS);
+    font-size: 22px;
+    background-color:var(--BTN-COLOR);
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    opacity:0;
+    animation: fadeInUp 1.5s ease-in-out forwards, hinge 3s ease-in-out infinite; 
+    animation-delay: 0.7s; 
+     
+}
+
+.discount-button:hover {
+    cursor: pointer;
+ }
+
 .button {
     width:240px;
     height: 60px;
     line-height:50px;
     border-radius:var(--BORDER-RADIUS);
     font-size: 18px;
-    background-color:#4287f5;
+    background-color:var(--BTN-COLOR);
     text-align: center;
     font-weight: bold;
     border: none;
@@ -144,6 +166,11 @@ section {
    cursor: pointer;
 }
 
+.btn-arrow {
+    height:50%;
+    width:auto;
+} 
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -153,6 +180,27 @@ section {
     }
     60% {
         transform: translateY(-5px);
+    }
+}
+
+@keyframes hinge {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(3deg);
+    }
+    40% {
+        transform: rotate(-2deg);
+    }
+    60% {
+        transform: rotate(1deg);
+    }
+    80% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
 
@@ -335,7 +383,7 @@ main {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width:70%;
+    width:100%;
     height:auto;
     z-index:10;
 }
@@ -349,8 +397,8 @@ main {
 #secondary-text {
     font-size: var(--MEDIUM-TEXT);
     opacity:0;
-    animation: fadeInUp 3s ease-in-out forwards; /* Optional animation for paragraph */
-    animation-delay: 2s; /* Start animation after h1 is done */
+    animation: fadeInUp 2.5s ease-in-out forwards; /* Optional animation for paragraph */
+    animation-delay: 1s; /* Start animation after h1 is done */
 }
 
 @keyframes fadeIn {
@@ -510,7 +558,7 @@ footer {
     top:0;
     bottom:0;
     backdrop-filter: blur(1px); /* Adjust blur level as needed */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background color */
     z-index: 10; /* Ensure it is above the video but below content */
 }
 
