@@ -1,9 +1,10 @@
 :root {
-    --MAIN-COLOR:#252e43;
-    --SECONDARY-COLOR:rgba(0,0,0,1);
+    --MAIN-COLOR:#537164;
+    --SECONDARY-COLOR:rgba(0,0,0,0.7);
     --BTN-COLOR:#188bf6;
     --TEXT-COLOR:rgba(255,255,255,1);
-    --BIG-TEXT:50px;
+    --SOFT-COLOR:#EAE8E1;
+    --BIG-TEXT:40px;
     --MEDIUM-TEXT:28px;
     --SMALL-TEXT:20px;
     --SMALLEST-TEXT:16px;
@@ -28,12 +29,15 @@ body {
     padding: 0;
     line-height: 1.6;
     background-color:var(--MAIN-COLOR);
+    position: relative;
 }
 
 h1 {
-    font-size:80px;
+    font-size:65px;
     margin:var(--MARGIN);
     line-height:100%;
+    width:800px;
+    width:70%;
     opacity: 0; /* Start with invisible text */
     animation: fadeInUp 1.5s ease-in-out forwards; /* Apply the animation */
     animation-delay: 0.2s; /* Start animation after h1 is done */
@@ -54,6 +58,24 @@ h3 {
 p {
     font-size:var(--SMALL-TEXT);
     margin:var(--MARGIN);
+    line-height: 130%;
+}
+
+.big-paragraph {
+    font-size:35px;
+    margin-bottom:0;
+    opacity:0;
+    animation: fadeInUp 1.5s ease-in-out forwards; /* Apply the animation */
+    animation-delay: 0.2s; /* Start animation after h1 is done */
+}
+
+.small-paragraph {
+    font-size:23px;
+    font-weight: bold;
+    margin-top:0;
+    opacity:0;
+    animation: fadeInUp 1.5s ease-in-out forwards; /* Apply the animation */
+    animation-delay: 0.2s; /* Start animation after h1 is done */
 }
 
 a {
@@ -73,6 +95,16 @@ section {
 .big-margin {
     margin:var(--BIG-MARGIN);
 }
+
+.main-color {
+    color:var(--MAIN-COLOR);
+    padding-top:var(--BIG-MARGIN);
+}
+
+.marked-text {
+    color:black;
+}
+
 
 /* @media only screen and (max-width: 1026px) {
     :root {
@@ -109,12 +141,50 @@ section {
     max-width:1500px;
 }
 
+@media only screen and (min-width: 3000px) {
+    h1 {
+        font-size:91px;
+    }
+    
+    :root {
+        --BIG-TEXT:56px;
+        --MEDIUM-TEXT:39.2px;
+        --SMALL-TEXT:28px;
+        --SMALLEST-TEXT:22.4px;
+        --FONT-FAMILY: 'Arial, sans-serif'; 
+        --PADDING: 20px;
+        --MARGIN: 30px;
+        --BIG-MARGIN:40px;
+        --BIGGEST-MARGIN:80px;
+        --BORDER-RADIUS:11px;
+    }
+    
+}
+
+
 
 /* =============== BUTTONS  ================ */
 
 .button-container {
     display:flex;
-    margin-top:var(--BIGGEST-MARGIN);
+    margin-top:var(--BIG-MARGIN);
+}
+
+.contact-button {
+    width:300px;
+    height: 55px;
+    line-height:50px;
+    border-radius:var(--BORDER-RADIUS);
+    font-size: 22px;
+    background-color:var(--BTN-COLOR);
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
 }
 
 .discount-button {
@@ -367,6 +437,10 @@ nav ul li a:hover::after {
 
 
 /* =============== LANDING PAGE ================ */
+#home {
+    height:84vh;
+}
+
 main {
     height: 100vh;
     width: 100%;
@@ -421,8 +495,239 @@ main {
     }
 }
 
+.big-width-section {
+    width:58%;
+    height:100%;
+    background-color: var(--MAIN-COLOR);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.small-width-section {
+    width:42%;
+    height:100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.blurred-background {
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    backdrop-filter: blur(1px); /* Adjust blur level as needed */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background color */
+    z-index: 10; /* Ensure it is above the video but below content */
+}
+
+.margin-left {
+    margin-left:10%;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 5;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay for better text readability */
+}
+
+
+
 
 /* =============== END OF LANDING PAGE ================ */
+
+
+
+
+/* =============== REVIEWS ================ */
+
+#reviews {
+    padding-top:0;
+    margin-top:0;
+    width:100%;
+    margin:0 auto;
+    background-color: white;
+    display:flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-divider-container {
+    display:flex;
+    width:61%;
+    height:50%;
+    position: relative;
+    max-width:1170px;
+}
+
+.review-divider-outer-container {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--SOFT-COLOR);
+    padding:10px 0;
+}
+
+.review-block {
+    margin:1.333%;
+    width:32%;
+    height:auto;
+    text-align: center;
+    background-color: lightcyan;
+    border:3px solid var(--MAIN-COLOR);
+    opacity: 0;
+    transform: translateY(-200px);
+    animation: fall 2s ease forwards, bounce 0.5s 2s ease forwards, fadeIn 2.5s forwards;
+}
+
+.review-block > h2 {
+   margin: 10px 0 5px 0;
+    color:var(--MAIN-COLOR);
+}
+
+.review-block > p {
+    margin: 5px 0 10px 0;
+    color:var(--MAIN-COLOR);
+}
+
+
+.review-phone-right {
+    position: absolute;
+    right:0;
+    top:-15%;
+    width:25%;
+    max-width:700px;
+    height:auto;
+    z-index:10;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUpAndDown 4s ease-out forwards;
+    /* Adjust delay for each image */
+    animation-delay: 2s;
+}
+
+.review-phone-left {
+    position: absolute;
+    left:0;
+    top:-15%;
+    width:25%;
+    max-width:700px;
+    height:auto;
+    z-index:10;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUpAndDown 4s ease-out forwards;
+    /* Adjust delay for each image */
+    animation-delay: 2s;
+}
+
+.review-text{
+    color:var(--SECONDARY-COLOR);
+    font-weight: bold;
+    width:70%;
+    max-width: 1000px;
+}
+
+.review-text-container {
+    width:50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1000px;
+}
+
+@keyframes fadeInUpAndDown {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+@keyframes fillBar {
+    to {
+        width: var(--stat-width);
+    }
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* ============= END OF LANDING PAGE ============== */
 
 
 
@@ -451,7 +756,6 @@ main {
 
 
 /* =========== END OF SERVICES =========== */
-
 
 
 
@@ -547,51 +851,4 @@ footer {
     height:auto;
 }
 
-/* =============== END OF LANDING PAGE ================ */
-
-.blurred-background {
-    width:100%;
-    height:100%;
-    position: absolute;
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
-    backdrop-filter: blur(1px); /* Adjust blur level as needed */
-    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background color */
-    z-index: 10; /* Ensure it is above the video but below content */
-}
-
-.video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 5;
-}
-
-#background-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-}
-
-.content {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay for better text readability */
-}
+/* =============== END OF FOOTER ================ */
