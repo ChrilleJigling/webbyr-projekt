@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyttstädning Stockholm</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img id="logo" src="./images/logo.gif" alt="logo">
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="prices.html">Priser/Boka Online</a></li>
+                <li><a href="checklist.html">Checklista</a></li>
+                <li><a href="#contact">Kontakta Oss</a></li>
+            </ul>
+        </nav>
+
+        <nav class="checklist-nav">
+            <ul class="nav-links" id="nav-menu">
+                <li><a onClick="scrollToElement('checklist-all')">Alla Rum</a></li>
+                <li><a onClick="scrollToElement('checklist-kitchen')">Kök</a></li>
+                <li><a onClick="scrollToElement('checklist-bathroom')">Badrum</a></li>
+                <li><a onClick="scrollToElement('checklist-laundry')">Tvättrum</a></li>
+                <li><a onClick="scrollToElement('checklist-balcony')">Balkong/Uteplats</a></li>
+                <li><a onClick="scrollToElement('checklist-garage')">Förråd, Garage, Vind m.m.</a></li>
+                <li><a onClick="scrollToElement('checklist-freezer')">Avfrostning frys</a></li>
+                <li><a onClick="scrollToElement('checklist-stove')">Kamin/Öppen spis</a></li>
+                <li><a onClick="scrollToElement('checklist-möbler')">Möbler</a></li>
+                <li><a onClick="scrollToElement('checklist-brunn')">Vattenlås/Golvbrunnar</a></li>
+                <li><a onClick="scrollToElement('checklist-ejstandard')">Ej Standard</a></li>
+                <li><a onClick="scrollToElement('checklist-addons')">Tillval</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="checklist-container">
+        <h1>Vad ingår i en flyttstädning?</h1>
+
+        <div id="checklist-all" class="checklist-section">
+            <h2>Alla Rum</h2>
+            <ul>
+                <li><span class="checkmark">✔</span> Dammsugning samt våttorkning av golv.</li>
+                <li><span class="checkmark">✔</span> Torkning av målade ytor som t ex dörrar, foder, fönsterbågar, snickerier, golvsocklar.</li>
+                <li><span class="checkmark">✔</span> Fönsterputsning på samtliga sidor.(Förutsatt att fönstren kan delas och vi kommer åt att rengöra invändigt, mellan och utvändigt på ett normalt sätt).</li>
+                <li><span class="checkmark">✔</span> Avdamning samt torkning av element samt utrymmet mellan element och vägg där det är möjligt. (Vi delar inte och monterar inte bort eller isär några element).</span></li>
+                <li><span class="checkmark">✔</span> Rengöring av garderober (invändigt, utvändigt samt ovanpå).</span></li>
+                <li><span class="checkmark">✔</span> Väggar och tak avdammas.</span></li>
+            </ul>
+        </div>
+
+        <div id="checklist-kitchen" class="checklist-section">
+            <h2>Flyttstädning Kök</h2>
+            <ul>
+                <li><span class="checkmark">✔</span> Väggar och kakel avdammas och rengörs från fettfläckar.</li>
+                <li><span class="checkmark">✔</span> Skåp och lådor rengörs både invändigt och utvändigt.</li>
+                <li><span class="checkmark">✔</span> Skärbrädor rengörs.</li>
+                <li><span class="checkmark">✔</span> Diskbänk torkas.</span></li>
+                <li><span class="checkmark">✔</span> (Spisen dras ut av dig) Vi rengör spisen på alla sidor även plattor, ugn, galler, plåtar och vred.
+                    OBS! Om ugnsglaset är dubbelt och du vill ha rengjort mellan, se då till att skruva bort glaset då vi av säkerhetsskäl inte gör detta!</span></li>
+                <li><span class="checkmark">✔</span> Rengöring av väggar och golv runt spisens normala placering.</span></li>
+                <li><span class="checkmark">✔</span>Kyl och frys frostas av innan vi kommer (vid tillval tillkommer en kostnad på 200kr efter Rut) de luftas och våttorkas både in- och utvändigt.</span></li>
+                <li><span class="checkmark">✔</span> Köksfläkt och ventil rengörs utvändigt.</span></li>
+            </ul>
+        </div>
+
+        
+        <div id="checklist-bathroom" class="checklist-section">
+            <h2>Flyttstädning Badrum</h2>
+            <ul>
+                <li><span class="checkmark">✔</span> Rengöring av kakel och klinkers noggrant och ser till att eventuella avlagringar försvinner.</li>
+                <li><span class="checkmark">✔</span> Toalett rengörs.</li>
+                <li><span class="checkmark">✔</span> Rengöring av hela badkaret samt bakom och undertill om detta är utdraget, golvbrunnen är tillval.</li>
+                <li><span class="checkmark">✔</span> Rengöring av glasdörrar på duschen för att få bort eventuella kalk och fettavlagringar.</span></li>
+                <li><span class="checkmark">✔</span> Rengöring av badrumsskåpens alla ytor samt speglar.</span></li>
+            </ul>
+        </div>
+
+        <div id="checklist-laundry" class="checklist-section">
+            <h2>Flyttstädning Tvättrum</h2>
+            <ul>
+                <li><span class="checkmark">✔</span> Förutom nämnda åtgärder högst upp:</li>
+                <li><span class="checkmark">✔</span> Tvättmaskin och torktumlare torkas utvändigt (Dessa skall vara utdragna om rengöring bakom önskas).</li>
+                <li><span class="checkmark">✔</span> Torkar bort allt ludd från filtret och tvättmedelsrester från tvättmedelsfacken.</li>
+                <li><span class="checkmark">✔</span> Rengöring av glasdörrar på duschen för att få bort eventuella kalk och fettavlagringar.</span></li>
+                <li><span class="checkmark">✔</span> Rengöring av bänkar, ventiler och golvbrunn vid tillva</span></li>
+            </ul>
+        </div>
+
+        <div id="checklist-balcony" class="checklist-section">
+            <h2>Balkong/Uteplats</h2>
+            <ul>
+                <li><span class="checkmark">✔</span> Sopning/Dammsugning av balkongens/uteplatsens golv.</li>
+                <li><span class="checkmark">✔</span> Torkning av balkongräcken, dropplåtar samt eventuella stänger samt balkongväggens nedre plåtar/glas invändigt.</li>
+                <li><span class="checkmark">✔</span> Putsning av glaset så bra som det går att komma åt om detta önskas och beställs.</li>
+                <li><span class="checkmark">✔</span> Vid tillval av inglasad balkong putsas även alla balkongfönster. <br><span class="note">(Obs! Balkongfönster som ej är invikbara måste vara nedmonterade när vi kommer på plats om putsning av utsidan önskas.)</span></li>
+            </ul>
+        </div>
+
+        <div id="checklist-garage" class="checklist-section">
+            <h2>Förråd, Garage, Vind m.m.</h2>
+            <ul>
+                <li><span class="checkmark">✔</span> Golvytor sopas samt enklare avdamning och eventuella fönster putsas.</li>
+            </ul>
+        </div>
+
+        <div id="checklist-freezer" class="checklist-section">
+            <h2>Avfrostning frys</h2>
+            <ul>
+                <li><span class="checkmark">✔</span> Is avfrostas under tiden städningen utförs.</li>
+                <li><span class="checkmark">✔</span> <span class="note">(Skulle frysen vara så pass isig att avfrostning inte hinner färdigställas, kan timdebitering läggas till för färdigställande av avfrostning)</span></li>
+            </ul>
+        </div>
+
+        <div id="checklist-stove" class="checklist-section">
+            <h2>Kamin / Öppen spis</h2>
+            <ul>
+                <li><span class="checkmark">✔</span> Dammsugning av aska.</li>
+                <li><span class="checkmark">✔</span> In & utvändig våttorkning.</li>
+                <li><span class="checkmark">✔</span> Glas i luckan rengörs.</li>
+            </ul>
+        </div>
+
+        <div id="checklist-möbler" class="checklist-section">
+            <h2>Möbler</h2>
+            <ul>
+                <li><span class="checkmark">✔</span> Dammsugning av soffa/säng.</li>
+                <li><span class="checkmark">✔</span> Dammtorkning.</li>
+                <li><span class="checkmark">✔</span> <span class="note">(Obs! Vi tillhandahåller ej några specialverktyg eller maskin för möbel/matt rengöring eller liknande.)</span></li>
+            </ul>
+        </div>
+
+        <div id="checklist-brunn" class="checklist-section">
+            <h2>Vattenlås / Golvbrunnar</h2>
+            <ul>
+                <li><span class="checkmark">✔</span> Vattenlåset öppnas och rengörs invändigt.</li>
+                <li><span class="checkmark">✔</span> <span class="note">(Obs! Vi monterar ej isär rör eller liknande för invändig rengöring, djupare rengöring utförs av spolfirma.)</span></li>
+            </ul>
+        </div>
+
+
+        <div id="checklist-ejstandard" class="checklist-section">
+            <h2>Ingår ej som standard </h2>
+            <p><b>(Men kan självklart läggas till mot en extra kostnad)</b></p>
+            <ul>
+                <li><span class="checkmark">✔</span> Golvbehandling</li>
+                <li><span class="checkmark">✔</span> <span class="note">Rengöring av lösa föremål eller sådant som inte är standard i bostaden.</span></li>
+
+                <li><span class="checkmark">✔</span> <span class="note">Borttagning av klistermärken krokar efter tavlor, hyllor, stearin, tejp, lim m.m..</span></li>
+                <li><span class="checkmark">✔</span> <span class="note">Persiennrengöring (Kan tilläggas mot timdebitering).</span></li>
+                <li><span class="checkmark">✔</span> <span class="note">Rengöring av golvbrunn / vattenlås, inklusive demontering och montering (Tillval).</span></li>
+                <li><span class="checkmark">✔</span> <span class="note">Balkong (Tillval).</span></li>
+                <li><span class="checkmark">✔</span> <span class="note">Städning av garage (Tillval).</span></li>
+                <li><span class="checkmark">✔</span> <span class="note">Våttorkning/Tvätt av väggar och tak (endast avfläckning av väggar ingår i kök samt väggar i badrum ingår).</span></li>
+                <li><span class="checkmark">✔</span> <span class="note">Skurning av golv då de är väldigt smutsiga (utöver dammsugning och våttorkning).
+                </span></li>
+                <li><span class="checkmark">✔</span> <span class="note">Specifik fogrengöring mellan kakel.
+                    Normal avtorkning/enklare rengöring med svamp ingår för att få bort tvålrester m.m.
+                    (Missfärgning av fogar kan ha uppstått om detta inte underhållits under tiden du bott i bostaden, detta går inte bort vid normal rengöring.)</span></li>
+                <li><span class="checkmark">✔</span> <span class="note">Nedmontering eller isärplockning av inredning eller liknande för att komma åt att städa.</span></li>
+                <li><span class="checkmark">✔</span> <span class="note">(Även flytt av spis, badkar kyl/frys & tvättmaskin/torktummlare, då vi inte vill riskera skador).</span></li>
+                <li><span class="checkmark">✔</span> <span class="note">Städning av tomt/trädgård (Kan tilläggas mot timdebitering).</span></li>
+                <li><span class="checkmark">✔</span> <span class="note">Vindsutrymme/förråd (Tillval).</span></li>
+                <li><span class="checkmark">✔</span> <span class="note">Utsida på fönsterbleck (Endast på balkongen om tillval av balkong gjorts).</span></li>
+                <li><span class="checkmark">✔</span> <span class="note">Rengöring mellan glas där fönster ej går att dela på.</span></li>
+                <li><span class="checkmark">✔</span> <span class="note">Rengöring av trasiga fönster.</span></li>
+                <li><span class="checkmark">✔</span> <span class="note">Bortforsling av skräp eller lösa föremål som ska kastas.</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="checklist-addons" class="checklist-container">
+        <h1>Tillvals Möjligheter</h1>
+
+        <div class="checklist-section">
+            <h2>Balkong/Uteplats</h2>
+            <ul>
+                <li><span class="checkmark">✔</span> Sopning/Dammsugning av balkongens/uteplatsens golv.</li>
+                <li><span class="checkmark">✔</span> Torkning av balkongräcken, dropplåtar samt eventuella stänger samt balkongväggens nedre plåtar/glas invändigt.</li>
+                <li><span class="checkmark">✔</span> Putsning av glaset så bra som det går att komma åt om detta önskas och beställs.</li>
+                <li><span class="checkmark">✔</span> Vid tillval av inglasad balkong putsas även alla balkongfönster. <br><span class="note">(Obs! Balkongfönster som ej är invikbara måste vara nedmonterade när vi kommer på plats om putsning av utsidan önskas.)</span></li>
+            </ul>
+        </div>
+
+        <div class="checklist-section">
+            <h2>Förråd, Garage, Vind m.m.</h2>
+            <ul>
+                <li><span class="checkmark">✔</span> Golvytor sopas samt enklare avdamning och eventuella fönster putsas.</li>
+            </ul>
+        </div>
+
+        <div class="checklist-section">
+            <h2>Avfrostning frys</h2>
+            <ul>
+                <li><span class="checkmark">✔</span> Is avfrostas under tiden städningen utförs.</li>
+                <li><span class="checkmark">✔</span> <span class="note">(Skulle frysen vara så pass isig att avfrostning inte hinner färdigställas, kan timdebitering läggas till för färdigställande av avfrostning)</span></li>
+            </ul>
+        </div>
+
+        <div class="checklist-section">
+            <h2>Kamin / Öppen spis</h2>
+            <ul>
+                <li><span class="checkmark">✔</span> Dammsugning av aska.</li>
+                <li><span class="checkmark">✔</span> In & utvändig våttorkning.</li>
+                <li><span class="checkmark">✔</span> Glas i luckan rengörs.</li>
+            </ul>
+        </div>
+
+        <div class="checklist-section">
+            <h2>Möbler</h2>
+            <ul>
+                <li><span class="checkmark">✔</span> Dammsugning av soffa/säng.</li>
+                <li><span class="checkmark">✔</span> Dammtorkning.</li>
+                <li><span class="checkmark">✔</span> <span class="note">(Obs! Vi tillhandahåller ej några specialverktyg eller maskin för möbel/matt rengöring eller liknande.)</span></li>
+            </ul>
+        </div>
+
+        <div class="checklist-section">
+            <h2>Vattenlås / Golvbrunnar</h2>
+            <ul>
+                <li><span class="checkmark">✔</span> Vattenlåset öppnas och rengörs invändigt.</li>
+                <li><span class="checkmark">✔</span> <span class="note">(Obs! Vi monterar ej isär rör eller liknande för invändig rengöring, djupare rengöring utförs av spolfirma.)</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <img class="logo-footer" src="./images/logo3.png" alt="logo3">
+        <p>&copy; CrispDesigns 2024. All rights reserved.</p>
+        <p><a href="#home">Hem</a> | <a href="#contact">Kontakta oss</a> | <a href="#portfolio">Portfolio</a></p>
+    </footer>
+
+
+
+    <script src="functions.js"></script>
+</body>
+</html>
