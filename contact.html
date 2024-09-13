@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyttstädning Stockholm</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+</head>
+<body class="booking-body">
+    <header>
+        <nav class="navbar">
+            <img id="logo" src="./images/logo.gif" alt="logo">
+            <div class="menu-icon" id="menu-icon">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="booking-page.html">Priser/Boka Online</a></li>
+                <li><a href="whyus.html">Varför Välja Oss?</a></li>
+                <li><a href="checklist.html">Checklista</a></li>
+                <li><a href="contact.html">Kontakta Oss</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <img src="./images/cleaningbg3.jpg" alt="cleaning service" class="background-image">
+
+    <div class="contact-container">
+            <div class="col col-text col-left">
+            <div class="inner spacing text-align-center contact_spacing">
+
+            <div class="contact-inner-container">
+                <img class="big-icon" src="./images/cleaning.png" alt="cleaning">
+                <h1><strong>Kontakta oss</strong></h1>
+                
+                <p><strong>Telefon 08:00 - 17:00 <br>
+                <a style="color:white; text-decoration: underline;" href="tel:0105855801">0105855801</a></strong></p>
+                            
+                <p><span style="color: #000;">Övrig tid: Fyll i formuläret nedan</span> <br>
+                <strong><span style="color: #81E546;">Vill du boka flyttstädning?</span><br>
+                <span style="color: #81E546;"> Boknings formuläret hittar du <a title="Boka flyttstädning" href="/priser" style="color:white; text-decoration: underline;">här!</a></span></strong></p>
+            </div>
+
+            <div class="form-container">
+                <form class="form-inner-container" id="id-contact-form" method="post" action="/include/contact.php" enctype="multipart/form-data">
+                <fieldset id="contact-form"><label>Namn: *</label><br>
+                <input name="name2" required="" type="text" placeholder="Anders"><br>
+                <label>E-post: *</label><br>
+                <input name="email" required="" type="email" placeholder="a.andersson@gmail.com"><br>
+                <label>Telefonnummer: *</label><br>
+                <input name="phone_number" required="" type="text" placeholder=""><br>
+                <input name="subject" required="" type="hidden"> <label>Meddelande: *</label><br>
+                <textarea cols="40" name="message" required="" rows="10"></textarea><br>
+                <input id="contact-button" type="submit" value="Skicka meddelande"></fieldset>
+                <div style="display:none;visibility:hidden;">
+                <input type="hidden" id="Ncode" name="code" value="1726130289">
+                <input type="text" name="url" value=""> (Lämna tom)
+                </div>
+                <script>document.querySelectorAll('#Ncode').forEach(function(elem) {elem.value = Math.round(new Date().getTime()/1000);})</script>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container centered-section">
+            <h2>Med Flyttstädning Stockholm™ är din bostad i trygga händer.</h2>
+            <!-- MAPS -->
+            <div class="map-container">
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093666!2d144.95373631531697!3d-37.816279779751554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5779a74ee620c1!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1602314217045!5m2!1sen!2sus" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+            </div>
+            <div class="footer-inner-container">
+                <div class="footer-text-section paragraph-2tv2o3MU1B text-output cparagraph-2tv2o3MU1B none noBorder radius0 none" data-animation-class=""><div><h2><strong><br>Flyttstädning<br>Stockholm™</strong></h2></div></div>
+
+                <div class="footer-text-section">
+                    <h3>Kontakta Oss:</h3>
+                    <p><strong>Alla dagar:</strong> 08:00 - 17:00</p>
+                    <p><strong>Ring:</strong> 0105855800</p>
+                    <p><strong>Övrig tid:</strong> kontaktformulär</p>
+                    <p>Vi svarar snarast möjligt inom 24 timmar</p>
+                </div>
+                <div class="footer-text-section">
+                    <h3>Intregritets Policy</h3>
+                    <p class="orange-color">GDPR</p>
+                    <p class="orange-color">Intregritets Policy</p>
+                    <p class="orange-color">Avtal &/ Villkor</p>
+                </div>
+                <div class="footer-text-section">
+                    <h3>Om Oss</h3>
+                    <p><strong>Vi är din pålitliga partner för professionella flytt och städtjänster.</strong></p>
+                    <p>Med huvudkontor i Stockholm sträcker våra städtjänster sig över flera orter i hela Stor-Stockholm med omnejd.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="functions.js"></script>
+</body>
+</html>
