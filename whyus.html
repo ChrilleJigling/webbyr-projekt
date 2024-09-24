@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flyttstädning Stockholm</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <img id="logo" src="./images/logo.gif" alt="logo">
+            <img onClick="scrollToElement('nav-scroll');" id="logo" src="./images/logo.gif" alt="logo">
             <div class="menu-icon" id="menu-icon">
                 <div class="line"></div>
                 <div class="line"></div>
@@ -24,13 +27,13 @@
             </ul>
         </nav>
     </header>
-
+    
+    <div id="nav-scroll"></div>
     <img src="./images/cleaningbg3.jpg" alt="cleaning service" class="background-image">
 
 
     <div class="prices-container">
-
-        <section class="about-us">
+        <section class="about-us" style="margin-top:0;">
             <div class="text-content">
                 <h2>Vår affärsidé är simpel</h2>
                 <p>Vi ska utföra flytt & städtjänster åt företag och privatpersoner, till ett pressat pris med högsta kvalitet och bästa möjliga resultat.</p>
@@ -79,7 +82,7 @@
         </section>
     </div>
 
-    <footer>
+    <footer id="footer">
         <div class="footer-container centered-section">
             <h2>Med Flyttstädning Stockholm™ är din bostad i trygga händer.</h2>
             <!-- MAPS -->
@@ -98,25 +101,31 @@
 
                 <div class="footer-text-section">
                     <h3>Kontakta Oss:</h3>
-                    <p><strong>Alla dagar:</strong> 08:00 - 17:00</p>
-                    <p><strong>Ring:</strong> 0105855800</p>
-                    <p><strong>Övrig tid:</strong> kontaktformulär</p>
+                    <p><strong class="blue-color">Alla dagar:</strong> 08:00 - 17:00</p>
+                    <p><strong class="blue-color">Ring:</strong> 0105855800</p>
+                    <p><strong class="blue-color">Övrig tid:</strong> kontaktformulär</p>
                     <p>Vi svarar snarast möjligt inom 24 timmar</p>
                 </div>
                 <div class="footer-text-section">
                     <h3>Intregritets Policy</h3>
-                    <p class="orange-color">GDPR</p>
-                    <p class="orange-color">Intregritets Policy</p>
-                    <p class="orange-color">Avtal &/ Villkor</p>
+                    <p class="blue-color">GDPR</p>
+                    <p class="blue-color">Intregritets Policy</p>
+                    <p class="blue-color">Avtal &/ Villkor</p>
                 </div>
                 <div class="footer-text-section">
                     <h3>Om Oss</h3>
-                    <p><strong>Vi är din pålitliga partner för professionella flytt och städtjänster.</strong></p>
+                    <p><strong class="blue-color">Vi är din pålitliga partner för professionella flytt och städtjänster.</strong></p>
                     <p>Med huvudkontor i Stockholm sträcker våra städtjänster sig över flera orter i hela Stor-Stockholm med omnejd.</p>
                 </div>
             </div>
+
+            <div class="footer-bottom-container">
+                <p>
+                    © 2024 Flyttstädning Partner™ <br>
+                    Orgnr: 559020-5133. Alla rättigheter förbehållna.
+                </p>
+            </div>
         </div>
-        
     </footer>
 
     <script src="functions.js"></script>

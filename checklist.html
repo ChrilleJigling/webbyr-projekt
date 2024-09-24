@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flyttstädning Stockholm</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="checklist-body">
     <header>
         <nav class="navbar">
-            <img id="logo" src="./images/logo.gif" alt="logo">
+            <a><img id="logo" src="./images/logo.gif" alt="logo"></a>
             <ul class="nav-links" id="nav-menu">
                 <li><a href="index.html">Hem</a></li>
                 <li><a href="booking-page.html">Priser/Boka Online</a></li>
@@ -25,17 +28,13 @@
                 <li><a onClick="scrollToElement('checklist-kitchen')">Kök</a></li>
                 <li><a onClick="scrollToElement('checklist-bathroom')">Badrum</a></li>
                 <li><a onClick="scrollToElement('checklist-laundry')">Tvättrum</a></li>
-                <li><a onClick="scrollToElement('checklist-balcony')">Balkong/Uteplats</a></li>
-<!--                 <li><a onClick="scrollToElement('checklist-garage')">Förråd, Garage, Vind m.m.</a></li>
- -->                <li><a onClick="scrollToElement('checklist-freezer')">Avfrostning frys</a></li>
-                <li><a onClick="scrollToElement('checklist-stove')">Kamin</a></li>
-                <li><a onClick="scrollToElement('checklist-möbler')">Möbler</a></li>
-                <li><a onClick="scrollToElement('checklist-brunn')">Vattenlås/Golvbrunnar</a></li>
                 <li><a onClick="scrollToElement('checklist-ejstandard')">Ej Standard</a></li>
                 <li><a onClick="scrollToElement('checklist-addons')">Tillval</a></li>
             </ul>
         </nav>
     </header>
+
+    <div id="nav-scroll"></div>
 
     <div class="checklist-container">
         <h1>Vad ingår i en flyttstädning?</h1>
@@ -90,7 +89,13 @@
             </ul>
         </div>
 
-        <div id="checklist-balcony" class="checklist-section">
+    </div>
+
+    <div id="checklist-addons" class="checklist-container">
+        <h1>Tillvals Möjligheter</h1>
+        <h2>Skräddarsy dina tillval efter eget behov</h2>
+
+        <div class="checklist-section">
             <h2>Balkong/Uteplats</h2>
             <ul>
                 <li><span class="checkmark">✔</span> Sopning/Dammsugning av balkongens/uteplatsens golv.</li>
@@ -100,14 +105,14 @@
             </ul>
         </div>
 
-        <div id="checklist-garage" class="checklist-section">
+        <div class="checklist-section">
             <h2>Förråd, Garage, Vind m.m.</h2>
             <ul>
                 <li><span class="checkmark">✔</span> Golvytor sopas samt enklare avdamning och eventuella fönster putsas.</li>
             </ul>
         </div>
 
-        <div id="checklist-freezer" class="checklist-section">
+        <div class="checklist-section">
             <h2>Avfrostning frys</h2>
             <ul>
                 <li><span class="checkmark">✔</span> Is avfrostas under tiden städningen utförs.</li>
@@ -115,7 +120,7 @@
             </ul>
         </div>
 
-        <div id="checklist-stove" class="checklist-section">
+        <div class="checklist-section">
             <h2>Kamin / Öppen spis</h2>
             <ul>
                 <li><span class="checkmark">✔</span> Dammsugning av aska.</li>
@@ -124,7 +129,7 @@
             </ul>
         </div>
 
-        <div id="checklist-möbler" class="checklist-section">
+        <div class="checklist-section">
             <h2>Möbler</h2>
             <ul>
                 <li><span class="checkmark">✔</span> Dammsugning av soffa/säng.</li>
@@ -133,7 +138,7 @@
             </ul>
         </div>
 
-        <div id="checklist-brunn" class="checklist-section">
+        <div class="checklist-section">
             <h2>Vattenlås / Golvbrunnar</h2>
             <ul>
                 <li><span class="checkmark">✔</span> Vattenlåset öppnas och rengörs invändigt.</li>
@@ -141,14 +146,13 @@
             </ul>
         </div>
 
-
         <div id="checklist-ejstandard" class="checklist-section">
             <h2>Ingår ej som standard </h2>
             <p><b>(Men kan självklart läggas till mot en extra kostnad)</b></p>
             <ul>
                 <li><span class="checkmark">✔</span> Golvbehandling</li>
                 <li><span class="checkmark">✔</span> <span class="note">Rengöring av lösa föremål eller sådant som inte är standard i bostaden.</span></li>
-
+    
                 <li><span class="checkmark">✔</span> <span class="note">Borttagning av klistermärken krokar efter tavlor, hyllor, stearin, tejp, lim m.m..</span></li>
                 <li><span class="checkmark">✔</span> <span class="note">Persiennrengöring (Kan tilläggas mot timdebitering).</span></li>
                 <li><span class="checkmark">✔</span> <span class="note">Rengöring av golvbrunn / vattenlås, inklusive demontering och montering (Tillval).</span></li>
@@ -172,62 +176,7 @@
         </div>
     </div>
 
-    <div id="checklist-addons" class="checklist-container">
-        <h1>Tillvals Möjligheter</h1>
-
-        <div class="checklist-section">
-            <h2>Balkong/Uteplats</h2>
-            <ul>
-                <li><span class="checkmark">✔</span> Sopning/Dammsugning av balkongens/uteplatsens golv.</li>
-                <li><span class="checkmark">✔</span> Torkning av balkongräcken, dropplåtar samt eventuella stänger samt balkongväggens nedre plåtar/glas invändigt.</li>
-                <li><span class="checkmark">✔</span> Putsning av glaset så bra som det går att komma åt om detta önskas och beställs.</li>
-                <li><span class="checkmark">✔</span> Vid tillval av inglasad balkong putsas även alla balkongfönster. <br><span class="note">(Obs! Balkongfönster som ej är invikbara måste vara nedmonterade när vi kommer på plats om putsning av utsidan önskas.)</span></li>
-            </ul>
-        </div>
-
-        <div class="checklist-section">
-            <h2>Förråd, Garage, Vind m.m.</h2>
-            <ul>
-                <li><span class="checkmark">✔</span> Golvytor sopas samt enklare avdamning och eventuella fönster putsas.</li>
-            </ul>
-        </div>
-
-        <div class="checklist-section">
-            <h2>Avfrostning frys</h2>
-            <ul>
-                <li><span class="checkmark">✔</span> Is avfrostas under tiden städningen utförs.</li>
-                <li><span class="checkmark">✔</span> <span class="note">(Skulle frysen vara så pass isig att avfrostning inte hinner färdigställas, kan timdebitering läggas till för färdigställande av avfrostning)</span></li>
-            </ul>
-        </div>
-
-        <div class="checklist-section">
-            <h2>Kamin / Öppen spis</h2>
-            <ul>
-                <li><span class="checkmark">✔</span> Dammsugning av aska.</li>
-                <li><span class="checkmark">✔</span> In & utvändig våttorkning.</li>
-                <li><span class="checkmark">✔</span> Glas i luckan rengörs.</li>
-            </ul>
-        </div>
-
-        <div class="checklist-section">
-            <h2>Möbler</h2>
-            <ul>
-                <li><span class="checkmark">✔</span> Dammsugning av soffa/säng.</li>
-                <li><span class="checkmark">✔</span> Dammtorkning.</li>
-                <li><span class="checkmark">✔</span> <span class="note">(Obs! Vi tillhandahåller ej några specialverktyg eller maskin för möbel/matt rengöring eller liknande.)</span></li>
-            </ul>
-        </div>
-
-        <div class="checklist-section">
-            <h2>Vattenlås / Golvbrunnar</h2>
-            <ul>
-                <li><span class="checkmark">✔</span> Vattenlåset öppnas och rengörs invändigt.</li>
-                <li><span class="checkmark">✔</span> <span class="note">(Obs! Vi monterar ej isär rör eller liknande för invändig rengöring, djupare rengöring utförs av spolfirma.)</span></li>
-            </ul>
-        </div>
-    </div>
-
-    <footer>
+    <footer id="footer">
         <div class="footer-container centered-section">
             <h2>Med Flyttstädning Stockholm™ är din bostad i trygga händer.</h2>
             <!-- MAPS -->
@@ -246,26 +195,33 @@
 
                 <div class="footer-text-section">
                     <h3>Kontakta Oss:</h3>
-                    <p><strong>Alla dagar:</strong> 08:00 - 17:00</p>
-                    <p><strong>Ring:</strong> 0105855800</p>
-                    <p><strong>Övrig tid:</strong> kontaktformulär</p>
+                    <p><strong class="blue-color">Alla dagar:</strong> 08:00 - 17:00</p>
+                    <p><strong class="blue-color">Ring:</strong> 0105855800</p>
+                    <p><strong class="blue-color">Övrig tid:</strong> kontaktformulär</p>
                     <p>Vi svarar snarast möjligt inom 24 timmar</p>
                 </div>
                 <div class="footer-text-section">
                     <h3>Intregritets Policy</h3>
-                    <p class="orange-color">GDPR</p>
-                    <p class="orange-color">Intregritets Policy</p>
-                    <p class="orange-color">Avtal &/ Villkor</p>
+                    <p class="blue-color">GDPR</p>
+                    <p class="blue-color">Intregritets Policy</p>
+                    <p class="blue-color">Avtal &/ Villkor</p>
                 </div>
                 <div class="footer-text-section">
                     <h3>Om Oss</h3>
-                    <p><strong>Vi är din pålitliga partner för professionella flytt och städtjänster.</strong></p>
+                    <p><strong class="blue-color">Vi är din pålitliga partner för professionella flytt och städtjänster.</strong></p>
                     <p>Med huvudkontor i Stockholm sträcker våra städtjänster sig över flera orter i hela Stor-Stockholm med omnejd.</p>
                 </div>
             </div>
+
+            <div class="footer-bottom-container">
+                <p>
+                    © 2024 Flyttstädning Partner™ <br>
+                    Orgnr: 559020-5133. Alla rättigheter förbehållna.
+                </p>
+            </div>
         </div>
     </footer>
-
+    
     <script src="functions.js"></script>
 </body>
 </html>

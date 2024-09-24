@@ -5,64 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flyttstädning Stockholm</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <img id="logo" src="./images/logo.gif" alt="logo">
+        <nav id="nav" class="navbar">
+           <img onClick="scrollToElement('nav-scroll');" id="logo" src="./images/logo.gif" alt="logo">
+
+            <div class="nav-info-container">
+                <div class="nav-info-block" onClick="scrollToElement('footer');">
+                    <img src="images/map.png" alt="map icon">
+                    <span>Franzéngatan 30,<br>112 16 Stockholm</span>
+                </div>
+
+                <div class="nav-info-block" onClick="scrollToElement('footer');">
+                    <img src="images/time.png" alt="clock icon">
+                    <span>Mån - Sön:<br>08:00 - 17:00</span>
+                </div>
+
+                <a href="tel:+010 58 558 08">
+                    <div class="nav-info-block">
+                        <img src="images/phone-call.png" alt="phone icon">
+                        <span>Ring nu:<br>010 58 558 08</span>
+                    </div>
+                </a>
+            </div>
+
             <div class="menu-icon" id="menu-icon">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
+            
             <ul class="nav-links" id="nav-menu">
                 <li><a href="index.html">Hem</a></li>
-                <li><a href="booking-page-2.html">Priser/Boka Online</a></li>
+                <li><a href="booking-page.html">Priser/Boka Online</a></li>
                 <li><a href="whyus.html">Varför Välja Oss?</a></li>
                 <li><a href="checklist.html">Checklista</a></li>
-                <li><a href="contact.html">Kontakta Oss</a></li>
+                <li><a href="contact2.html">Kontakta Oss</a></li>
             </ul>
         </nav>
     </header>
 
+    <div id="nav-scroll"></div>
+
     <!-- Landing Page -->
-<!--     <main id="home">
-        <div class="video-background">
-            <video id="background-video" autoplay loop muted>
-                <source src="cleaning1920x1080.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="blurred-background"></div>
-        </div>
-
-        <div class="centered-text-container">
-            <h1>FLYTTSTÄDNING I STOCKHOLM</h1>
-            <div class="button-container">
-                <a class="discount-button">TA DEL AV DAGENS KAMPANJ <img class="btn-arrow" src="./images/arrow.png" alt="right arrow"></a>
-            </div>
-        </div>
-    </main>
-
-    <section id="services">
-        <div class="test-container">
-           <img src="./images/">
-        </div>
-    </section> -->
-    <!-- END -->
-
-
-    <!-- Landing Page 2-->
     <main id="home">
         <div class="big-width-section">
-            <p class="big-paragraph landing-margin-left">BOKA FLYTTSTÄD IDAG!</p>
-            <h1 class="landing-margin-left-2">GRATIS FÖNSTERPUTS. <br> + HELA 15% RABATT <br> PÅ FLYTTSTÄDNINGEN</h1>
-            <p class="small-paragraph landing-margin-left-3">Om du även bokar flytthjälp.</p>
-            <div class="button-container">
-                <a class="landing-margin-left-4 discount-button">TA DEL AV DAGENS KAMPANJ <img class="btn-arrow" src="./images/arrow.png" alt="right arrow"></a>
+            <p class="big-paragraph landing-margin-left index-text">BOKA FLYTTSTÄD IDAG!</p>
+            <h1 class="landing-margin-left-2 index-text">GRATIS FÖNSTERPUTS. <br> + HELA 15% RABATT <br> PÅ FLYTTSTÄDNINGEN</h1>
+            <p class="small-paragraph landing-margin-left-3 index-text">Om du även bokar flytthjälp.</p>
+            <div class="button-container landing-margin-left-4">
+                <a href="booking-page.html" class="discount-button">
+                    <div class="btn-text white-color">SE PRISER <img class="btn-arrow-2" src="./images/arrow.png" alt="right arrow"></div>
+                    <div class="second-btn-text">SMIDIG ONLINEBOKNING</div>
+                </a>
             </div>
-        </div>        
-
+        </div>     
+        
         <div class="small-width-section">
+            <img class="background-image" src="./images/bg.jpeg" alt="background-image">
+        </div>   
+
+<!--         <div class="small-width-section">
             <div class="video-background">
                 <video id="background-video" autoplay loop muted>
                     <source src="cleaning1920x1080.mp4" type="video/mp4">
@@ -70,7 +80,7 @@
                 </video>
                 <div class="blurred-background"></div>
             </div>
-        </div>        
+        </div>    -->     
     </main> 
 
     <!-- END -->
@@ -83,7 +93,7 @@
             <div class="review-divider-container">
                 <div class="review-block">
                   <!--   <img class="five-stars-img" src="./images/5stars.gif" alt="5 stars"> -->
-                    <h2 id="review-h2-first"><img class="review-icon" src="./images/review.png">Betyg 4.7 / 5</h2>
+                    <h2 id="review-h2-first"><img class="review-icon" src="./images/rating2.png">Betyg 4.7 / 5</h2>
                     <p>967 Omdömen</p>
                 </div>
 
@@ -93,7 +103,7 @@
                 </div>
 
                 <div class="review-block">
-                    <h2><img class="review-icon" src="./images/experience.png">+13 Års</h2>
+                    <h2><img class="review-icon" src="./images/exp.webp">+13 Års</h2>
                     <p>Efarenhet</p>
                 </div>
             </div>
@@ -105,18 +115,19 @@
                 Vi på Flyttstädning Stockholm™ hjälper dig gärna med allt
                 från att svara på frågor till att boka din flytt eller städning.
                 <br><br>
-                Vår telefonväxel är öppen alla dagar i veckan mellan 08:00 - 17:00
+                Vår telefonväxel är öppen alla dagar i veckan mellan 08:00 - 17:00<br>
                 <span class="marked-text">RING: 0105855800</span>
                 <br><br>
                 Övrig tid är du välkommen att kontakta oss via vårt kontaktformulär.
-                <span class="marked-text">Vi svarar alltid på mail snarast möjligt inom 24 timmar.</span>
+                <span class="marked-text"><br>Vi svarar alltid på mail snarast möjligt inom 24 timmar.</span>
             </p>
 
             <div class="button-container">
-                <a class="contact-button"><img class="btn-arrow" src="./images/arrow.png" alt="right arrow">Kontakta Oss </a>
+                <a href="contact.html" class="contact-button"><img class="btn-arrow" src="./images/user.png" alt="right arrow">Kontakta Oss </a>
             </div>
         </div>
 
+        <h2 class="bottom-header">Hur fungerar det?</h2>
         <img class="review-phone-right" src="./images/667a741501d4bd82e3951058.gif" alt="phone with reviews">
     </section>
 
@@ -127,7 +138,7 @@
         <!-- <img class="background-image" src="./images/bg.png"> -->
 
         <div class="info-container">
-            <div class="info-block">
+            <div class="info-block" style="margin-right:10px;">
                <h3>Steg 1</h3>
                <h4>Boka smidigt via vårt onlineformulär.</h4>
                <p>
@@ -139,7 +150,7 @@
                 </p>
             </div>
 
-            <div class="info-block">
+            <div class="info-block" style="margin:0 10px;">
                 <h3>Steg 2</h3>
                 <h4>Skriftlig bekräftelse på mailen.</h4>
                 <p>
@@ -151,7 +162,7 @@
                 </p>
             </div>
 
-            <div class="info-block">
+            <div class="info-block" style="margin-left:10px;">
                 <h3>Steg 3</h3>
                 <h4>Boka smidigt via vårt onlineformulär.</h4>
                 <p>
@@ -164,92 +175,181 @@
             </div>
         </div>
 
-        <div class="button-container">
+        <div class="button-container section-margin">
             <a class="prices-button">
                 <div class="btn-text">SE PRISER <img class="btn-arrow-2" src="./images/arrow.png" alt="right arrow"></div>
                 <div class="second-btn-text">SMIDIG ONLINEBOKNING</div>
             </a>
         </div>
-    </section>
 
-    <!-- ARTICLE SECTION -->
-    <section class="article-section">
-        <div class="article-content-wrapper">
-            <div class="article-image">
-                <img src="./images/img.webp" alt="Flyttstädning i Stockholm">
-            </div>
-            <div class="article-content">
-                <h1>Stockholms bästa flyttstäd</h1>
-                <p>Namnet <strong>Flyttstädning Stockholm™</strong> är varumärkes registrerat hos patent och registreringsverket. Varumärkesregistreringen är du välkommen att se här. Vid sökfältet till höger om "text i märket" skriver du "Flyttstädning Stockholm".</p>
-                <p>Vi utför flytthjälp och flyttstäd i hela Stockholm samt kringliggande städer. Vi håller pressade flyttstädnings priser, samtidigt som vi håller den högsta möjliga kvaliteten på både flytt och städtjänsterna.</p>
-                <p>Vi följer mäklarsamfundets checklista för flyttstädning och som extra trygghet har vi en städgaranti på hela 14 dagar som omfattar både dig och den nyinflyttade/hyresvärden.</p>
-                <h2>Flytt och städ i hela Stockholm</h2>
-                <p>Vårt mål är att vara den ledande och självklara flytt och städfirman i Stockholm. När det är dags för flytt och du behöver hjälp med flyttstädningen, ska vi vara den städfirma du kommer att tänka på.</p>
-                <p>Detta uppnår vi genom att ha den bästa kundtjänsten, bästa städpersonalen samt pressade flytt och städpriser. Vårt miljötänk är en självklarhet, framförallt när det kommer till städningen. Kontakta oss redan idag så svarar vi på dina frågor eller hjälper dig att boka flytt och städ till ett förmånligt paketpris.</p>
+        <div class="article-section">
+        
+            <div class="article-content-wrapper">
+                <div>
+                    <div class="article-image">
+                        <img src="./images/img2.webp" alt="Flyttstädning i Stockholm">
+                    </div>
+                    <div class="article-content">
+                        <h1>Stockholms bästa flyttstäd</h1>
+                        <p>Namnet <strong>Flyttstädning Partner</strong> är varumärkes registrerat hos patent och registreringsverket. Varumärkesregistreringen är du välkommen att se här. Vid sökfältet till höger om "text i märket" skriver du "Flyttstädning Stockholm".</p>
+                        <p>Vi utför flytthjälp och flyttstäd i hela Stockholm samt kringliggande städer. Vi håller pressade flyttstädnings priser, samtidigt som vi håller den högsta möjliga kvaliteten på både flytt och städtjänsterna.</p>
+                        <p>Vi följer mäklarsamfundets checklista för flyttstädning och som extra trygghet har vi en städgaranti på hela 14 dagar som omfattar både dig och den nyinflyttade/hyresvärden.</p>
+                        <h2>Flytt och städ i hela Stockholm</h2>
+                        <p>Vårt mål är att vara den ledande och självklara flytt och städfirman i Stockholm. När det är dags för flytt och du behöver hjälp med flyttstädningen, ska vi vara den städfirma du kommer att tänka på.</p>
+                        <p>Detta uppnår vi genom att ha den bästa kundtjänsten, bästa städpersonalen samt pressade flytt och städpriser. Vårt miljötänk är en självklarhet, framförallt när det kommer till städningen. Kontakta oss redan idag så svarar vi på dina frågor eller hjälper dig att boka flytt och städ till ett förmånligt paketpris.</p>
+                    </div>
+                </div>
+
+                <section id="faq" class="centered-section">
+                    <h3 class="centered-text">FAQ - Vanliga Frågor:</h3>
+                    <div class="faq-container">
+                        <div class="faq-item-container">
+                            <div class="faq-item">
+                                <div class="faq-question">Vad kostar en flyttstädning?</div>
+                                <div class="faq-answer">
+                                    Vi håller ett fast pris baserat på bostadens m2. <br>
+                                    Självklart kan du skräddarsy din flyttstädning med oss och bokar du även flytthjälp får du hela 15% rabatt på flyttstädningen. <br><br>
+                                    <a href="booking-page.html" class="faq-answer-link">SE PRISER HÄR.</a>
+                                </div>
+                            </div>
+                    
+                            <div class="faq-item">
+                                <div class="faq-question">Hur lång tid tar städningen?</div>
+                                <div class="faq-answer">Förutsatt att bostaden inte är onormalt ingrodd eller katastrof på något sätt, flyttstädar vi normalt ca: 1 timme / 10m2.</div>
+                            </div>
+                    
+                            <div class="faq-item">
+                                <div class="faq-question">Hur gör jag med nyckel?</div>
+                                <div class="faq-answer">För oss spelar det inte så stor roll, bara vi kommer in.
+                                    Du kan antingen möta personalen på plats, lämna olåst eller gömma en nyckel.
+                                    <br><br>
+                                    Vill du lämna en nyckel på vårt kontor behöver vi få den senast 3 dagar innan städdatum.</div>
+                            </div>
+                        </div>
+                
+                        <div class="faq-item-container">
+                            <div class="faq-item">
+                                <div class="faq-question">Vad ingår i en flyttstädning?</div>
+                                <div class="faq-answer">Vi följer mäklarsamfundets riktlinjer.
+                                    Vår flyttstädnings checklista beskriver vad som ingår rum för rum.<br><br>
+                                    <a href="checklist.html" class="faq-answer-link">SE CHECKLISTAN HÄR.</a>
+                                </div>
+                            </div>
+                    
+                            <div class="faq-item">
+                                <div class="faq-question">Har ni städgaranti?</div>
+                                <div class="faq-answer">För din trygghet har vi självklart garanti på flyttstädningen.
+                                    Städgarantin gäller i hela 14 dagar räknat med städdagen.
+                                </div>
+                            </div>
+                    
+                            <div class="faq-item">
+                                <div class="faq-question">Behöver jag vara på plats?</div>
+                                <div class="faq-answer">Nej du behöver inte vara på plats under själva städningen och du behöver inte besikta om du inte har tid.
+                                    <br><br>
+                                    Dock uppskattar vi självklart om du kan komma och besikta städningen medans personalen fortfarande är på plats vilket underlättar för alla parter.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <a href="booking-page.html" class="discount-button">
+                            <div class="btn-text white-color">SE PRISER <img class="btn-arrow-2" src="./images/arrow.png" alt="right arrow"></div>
+                            <div class="second-btn-text">SMIDIG ONLINEBOKNING</div>
+                        </a>
+                    </div>
+                </section>
+            
+        
+                <div>
+                    <div class="article-content" style="width:65%;">
+                        <h1>Stockholms bästa flyttstäd</h1>
+                        <p>Namnet <strong>Flyttstädning Partner</strong> är varumärkes registrerat hos patent och registreringsverket. Varumärkesregistreringen är du välkommen att se här. Vid sökfältet till höger om "text i märket" skriver du "Flyttstädning Stockholm".</p>
+                        <p>Vi utför flytthjälp och flyttstäd i hela Stockholm samt kringliggande städer. Vi håller pressade flyttstädnings priser, samtidigt som vi håller den högsta möjliga kvaliteten på både flytt och städtjänsterna.</p>
+                        <p>Vi följer mäklarsamfundets checklista för flyttstädning och som extra trygghet har vi en städgaranti på hela 14 dagar som omfattar både dig och den nyinflyttade/hyresvärden.</p>
+                        <h2>Flytt och städ i hela Stockholm</h2>
+                        <p>Vårt mål är att vara den ledande och självklara flytt och städfirman i Stockholm. När det är dags för flytt och du behöver hjälp med flyttstädningen, ska vi vara den städfirma du kommer att tänka på.</p>
+                        <p>Detta uppnår vi genom att ha den bästa kundtjänsten, bästa städpersonalen samt pressade flytt och städpriser. Vårt miljötänk är en självklarhet, framförallt när det kommer till städningen. Kontakta oss redan idag så svarar vi på dina frågor eller hjälper dig att boka flytt och städ till ett förmånligt paketpris.</p>
+                    </div>
+                    <div class="article-image">
+                        <img src="./images/img1.webp" alt="Flyttstädning i Stockholm">
+                    </div>
+                </div>
+          
             </div>
         </div>
     </section>
+    <!-- ARTICLE SECTION -->
+
 
     <!-- FAQ SECTION -->
-    <section id="faq" class="centered-section">
+  <!--   <section id="faq" class="centered-section">
         <h3 class="centered-text">FAQ - Vanliga Frågor:</h3>
         <div class="faq-container">
             <div class="faq-item-container">
                 <div class="faq-item">
-                    <div class="faq-question">What is your return policy?</div>
-                    <div class="faq-answer">Our return policy allows you to return products within 30 days of purchase.</div>
+                    <div class="faq-question">Vad kostar en flyttstädning?</div>
+                    <div class="faq-answer">
+                        Vi håller ett fast pris baserat på bostadens m2. <br>
+                        Självklart kan du skräddarsy din flyttstädning med oss och bokar du även flytthjälp får du hela 15% rabatt på flyttstädningen. <br><br>
+                        <a href="booking-page.html" class="faq-answer-link">SE PRISER HÄR.</a>
+                    </div>
                 </div>
         
                 <div class="faq-item">
-                    <div class="faq-question">How long does shipping take?</div>
-                    <div class="faq-answer">Shipping typically takes 3-5 business days.</div>
+                    <div class="faq-question">Hur lång tid tar städningen?</div>
+                    <div class="faq-answer">Förutsatt att bostaden inte är onormalt ingrodd eller katastrof på något sätt, flyttstädar vi normalt ca: 1 timme / 10m2.</div>
                 </div>
         
                 <div class="faq-item">
-                    <div class="faq-question">Do you ship internationally?</div>
-                    <div class="faq-answer">Yes, we ship to most countries around the world.</div>
+                    <div class="faq-question">Hur gör jag med nyckel?</div>
+                    <div class="faq-answer">För oss spelar det inte så stor roll, bara vi kommer in.
+                        Du kan antingen möta personalen på plats, lämna olåst eller gömma en nyckel.
+                        <br><br>
+                        Vill du lämna en nyckel på vårt kontor behöver vi få den senast 3 dagar innan städdatum.</div>
                 </div>
             </div>
     
             <div class="faq-item-container">
                 <div class="faq-item">
-                    <div class="faq-question">Can I track my order?</div>
-                    <div class="faq-answer">Yes, you can track your order using the tracking number provided in your confirmation email.</div>
+                    <div class="faq-question">Vad ingår i en flyttstädning?</div>
+                    <div class="faq-answer">Vi följer mäklarsamfundets riktlinjer.
+                        Vår flyttstädnings checklista beskriver vad som ingår rum för rum.<br><br>
+                        <a href="checklist.html" class="faq-answer-link">SE CHECKLISTAN HÄR.</a>
+                    </div>
                 </div>
         
                 <div class="faq-item">
-                    <div class="faq-question">What payment methods do you accept?</div>
-                    <div class="faq-answer">We accept Visa, MasterCard, American Express, and PayPal.</div>
+                    <div class="faq-question">Har ni städgaranti?</div>
+                    <div class="faq-answer">För din trygghet har vi självklart garanti på flyttstädningen.
+                        Städgarantin gäller i hela 14 dagar räknat med städdagen.
+                    </div>
                 </div>
         
                 <div class="faq-item">
-                    <div class="faq-question">How can I contact customer support?</div>
-                    <div class="faq-answer">You can contact customer support via email or by calling our toll-free number.</div>
+                    <div class="faq-question">Behöver jag vara på plats?</div>
+                    <div class="faq-answer">Nej du behöver inte vara på plats under själva städningen och du behöver inte besikta om du inte har tid.
+                        <br><br>
+                        Dock uppskattar vi självklart om du kan komma och besikta städningen medans personalen fortfarande är på plats vilket underlättar för alla parter.</div>
                 </div>
             </div>
         </div>
         <div class="button-container">
-            <a class="discount-button red-btn">TA DEL AV DAGENS KAMPANJ <img class="btn-arrow" src="./images/arrow.png" alt="right arrow"></a>
+            <a href="booking-page.html" class="discount-button red-btn">SE PRISER <img class="btn-arrow" src="./images/arrow.png" alt="right arrow"></a>
         </div>
-    </section>
+    </section> -->
 
-
-    <footer>
+    <footer id="footer">
         <div class="footer-container centered-section">
             <h2>Med Flyttstädning Stockholm™ är din bostad i trygga händer.</h2>
             <!-- MAPS -->
             <div class="map-container">
-                <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093666!2d144.95373631531697!3d-37.816279779751554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5779a74ee620c1!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1602314217045!5m2!1sen!2sus" 
-                width="100%" 
-                height="100%" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
+                <div style="width: 100%; height:100%;"><iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Franz%C3%A9ngatan%2030+(Flytthj%C3%A4lp)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps systems</a></iframe></div>
             </div>
             <div class="footer-inner-container">
-                <div class="footer-text-section paragraph-2tv2o3MU1B text-output cparagraph-2tv2o3MU1B none noBorder radius0 none" data-animation-class=""><div><h2><strong><br>Flyttstädning<br>Stockholm™</strong></h2></div></div>
+                <div class="footer-text-section paragraph-2tv2o3MU1B text-output cparagraph-2tv2o3MU1B none noBorder radius0 none" data-animation-class="">
+                    <img class="footer-logo" src="./images/logo_mail.jpg" height="95" width="95" alt="logo">
+                    <h2><strong>Flyttstädning<br>Stockholm™</strong></h2>
+                </div>
 
                 <div class="footer-text-section">
                     <h3>Kontakta Oss:</h3>
@@ -270,15 +370,15 @@
                     <p>Med huvudkontor i Stockholm sträcker våra städtjänster sig över flera orter i hela Stor-Stockholm med omnejd.</p>
                 </div>
             </div>
-        </div>
-        
-    </footer>
 
-  <!--   <footer>
-        <img class="logo-footer" src="./images/logo3.png" alt="logo3">
-        <p>&copy; CrispDesigns 2024. All rights reserved.</p>
-        <p><a href="#home">Hem</a> | <a href="#contact">Kontakta oss</a> | <a href="#portfolio">Portfolio</a></p>
-    </footer> -->
+            <div class="footer-bottom-container">
+                <p>
+                    © 2024 Flyttstädning Partner™ <br>
+                    Orgnr: 559020-5133. Alla rättigheter förbehållna.
+                </p>
+            </div>
+        </div>
+    </footer>
 
     <script src="functions.js"></script>
 </body>
@@ -286,25 +386,3 @@
 
 
 
-
-
-<!--     <section id="contact">
-        <div class="contact-form-container">
-            <form class="contact-form">
-                <h2>Kontakta Oss</h2>
-                <div class="form-group">
-                    <label for="name">Namn</label>
-                    <input type="text" id="name" name="name" required placeholder="Christian Johansson">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required placeholder="test@gmail.com">
-                </div>
-                <div class="form-group">
-                    <label for="message">Meddelande</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Vi behöver en ny hemsida.."></textarea>
-                </div>
-                <button type="submit">Skicka</button>
-            </form>
-        </div>
-    </section> -->
