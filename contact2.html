@@ -12,22 +12,22 @@
 <body class="booking-body">
     <header>
         <nav class="navbar">
-            <img onClick="scrollToElement('nav-scroll');" id="logo" src="./images/logo.gif" alt="logo">
+            <img onClick="scrollToElement('nav-scroll');" id="logo" src="./images/logo.gif" alt="logo" loading="eager">
 
             <div class="nav-info-container">
-                <div class="nav-info-block" onClick="scrollToElement('footer');">
+                <div class="nav-info-block" onClick="scrollToElement('footer');" loading="eager">
                     <img src="images/map.png" alt="map icon">
                     <span>Franzéngatan 30,<br>112 16 Stockholm</span>
                 </div>
 
-                <div class="nav-info-block" onClick="scrollToElement('footer');">
+                <div class="nav-info-block" onClick="scrollToElement('footer');" loading="eager">
                     <img src="images/time.png" alt="clock icon">
                     <span>Mån - Sön:<br>08:00 - 17:00</span>
                 </div>
 
                 <a href="tel:+010 58 558 08">
                     <div class="nav-info-block">
-                        <img src="images/phone-call.png" alt="phone icon">
+                        <img src="images/phone-call.png" alt="phone icon" loading="eager">
                         <span>Ring nu:<br>010 58 558 08</span>
                     </div>
                 </a>
@@ -49,7 +49,7 @@
     </header>
 
     <div id="nav-scroll"></div>
-    <img src="./images/cleaningbg3.jpg" alt="cleaning service" class="background-image">
+    <img src="./images/cleaningbg3.jpg" alt="cleaning service" class="background-image" loading="lazy">
 
     <div class="contact-container">
         <div class="contact-inner-container">

@@ -94,7 +94,7 @@ p {
     margin-bottom:0;
     opacity:0;
     animation: fadeInUp 1.5s ease-in-out forwards; /* Apply the animation */
-    animation-delay: 0.2s; /* Start animation after h1 is done */
+    animation-delay: 0.1s; /* Start animation after h1 is done */
 }
 
 .small-paragraph {
@@ -103,7 +103,7 @@ p {
     margin-top:0;
     opacity:0;
     animation: fadeInUp 1.5s ease-in-out forwards; /* Apply the animation */
-    animation-delay: 0.2s; /* Start animation after h1 is done */
+    animation-delay: 0.1s; /* Start animation after h1 is done */
 }
 
 a {
@@ -1141,7 +1141,7 @@ main {
     transform: translateY(50px);
     animation: fadeInUpAndDown 3s ease-out forwards;
     /* Adjust delay for each image */
-    animation-delay: 2s;
+    animation-delay: 1.5s;
 }
 
 .review-phone-left {
@@ -1156,7 +1156,7 @@ main {
     transform: translateY(50px);
     animation: fadeInUpAndDown 3s ease-out forwards;
     /* Adjust delay for each image */
-    animation-delay: 2s;
+    animation-delay: 1.5s;
 }
 
 .review-text{
