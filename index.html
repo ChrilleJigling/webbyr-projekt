@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -44,10 +48,16 @@
             
             <ul class="nav-links" id="nav-menu">
                 <li><a href="index.html">Hem</a></li>
-                <li><a href="booking-page.html">Priser/Boka Online</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn" href="booking-page.html">Priser / Boka Online</a>
+                    <ul class="dropdown-content">
+                        <li><a href="booking.html">Flytthjälp</a></li>
+                        <li><a href="booking-page.html">Flyttstädning</a></li>
+                    </ul>
+                </li>
                 <li><a href="whyus.html">Varför Välja Oss?</a></li>
-                <li><a href="checklist.html">Checklista</a></li>
-                <li><a href="contact2.html">Kontakta Oss</a></li>
+                <li><a onClick="scrollToElement('checklist')">Checklista</a></li>
+                <li><a href="contact.html">Kontakta Oss</a></li>
             </ul>
         </nav>
     </header>
@@ -57,9 +67,9 @@
     <!-- Landing Page -->
     <main id="home">
         <div class="big-width-section">
-            <p class="big-paragraph landing-margin-left index-text">BOKA FLYTTSTÄD IDAG!</p>
-            <h1 class="landing-margin-left-2 index-text">GRATIS FÖNSTERPUTS. <br> + HELA 15% RABATT <br> PÅ FLYTTSTÄDNINGEN</h1>
-            <p class="small-paragraph landing-margin-left-3 index-text">Om du även bokar flytthjälp.</p>
+            <p class="big-paragraph landing-margin-left">BOKA FLYTTSTÄD IDAG!</p>
+            <h1 class="landing-margin-left-2">GRATIS FÖNSTERPUTS. <br> + HELA 15% RABATT <br> PÅ FLYTTSTÄDNINGEN</h1>
+            <p class="small-paragraph landing-margin-left-3">Om du även bokar flytthjälp.</p>
             <div class="button-container landing-margin-left-4">
                 <a href="booking-page.html" class="discount-button">
                     <div class="btn-text white-color">SE PRISER <img class="btn-arrow-2" src="./images/arrow.png" alt="right arrow" loading="eager"></div>
@@ -69,7 +79,9 @@
         </div>     
         
         <div class="small-width-section">
-            <img class="background-image" src="./images/bg.jpeg" alt="background-image" loading="eager">
+            <img id="landing-bg" class="background-image" src="./images/bg.jpeg" alt="background-image" loading="eager">
+            <img class="mobile-background-image" src="./images/bg3.png" alt="background-image" loading="eager">
+            <div id="mobile-overlay"></div>
         </div>   
 
 <!--         <div class="small-width-section">
@@ -93,7 +105,7 @@
             <div class="review-divider-container">
                 <div class="review-block">
                   <!--   <img class="five-stars-img" src="./images/5stars.gif" alt="5 stars"> -->
-                    <h2 id="review-h2-first"><img class="review-icon" src="./images/rating2.png" loading="lazy">Betyg 4.7 / 5</h2>
+                    <h2 id="review-h2-first"><img class="review-icon" src="./images/review.png" loading="lazy">Betyg 4.7 / 5</h2>
                     <p>967 Omdömen</p>
                 </div>
 
@@ -103,7 +115,7 @@
                 </div>
 
                 <div class="review-block">
-                    <h2><img class="review-icon" src="./images/exp.webp" loading="lazy">+13 Års</h2>
+                    <h2><img class="review-icon" src="./images/owl.png" loading="lazy">+13 Års</h2>
                     <p>Efarenhet</p>
                 </div>
             </div>
@@ -138,45 +150,54 @@
         <!-- <img class="background-image" src="./images/bg.png"> -->
 
         <div class="info-container">
-            <div class="info-block" style="margin-right:10px;">
-               <h3>Steg 1</h3>
-               <h4>Boka smidigt via vårt onlineformulär.</h4>
-               <p>
-                    Du väljer allt från datum till nyckel info.
-                    <br>
-                    All nödvändig information finns i
-                    <br>
-                    formuläret när du bokar.
-                </p>
+            <div id="info-block-1" class="info-block">
+                <img class="info-block-img" src="./images/steg1.jpg" alt="info block image" loading="lazy">
+                <div>
+                    <h3>Steg 1</h3>
+                    <h4>Boka smidigt via vårt onlineformulär.</h4>
+                    <p>
+                         Du väljer allt från datum till nyckel info.
+                         <br>
+                         All nödvändig information finns i
+                         <br>
+                         formuläret när du bokar.
+                     </p>
+                </div>
             </div>
 
-            <div class="info-block" style="margin:0 10px;">
-                <h3>Steg 2</h3>
-                <h4>Skriftlig bekräftelse på mailen.</h4>
-                <p>
-                    Vi går igenom din bokning och när vi
-                    <br>
-                    bekräftar uppdraget får du en
-                    <br>
-                    automatisk bekräftelse via mailen.
-                </p>
+            <div id="info-block-2" class="info-block">
+                <img class="info-block-img" src="./images/steg2.jpg" alt="info block image" loading="lazy">
+                <div>
+                    <h3>Steg 2</h3>
+                    <h4>Skriftlig bekräftelse på mailen.</h4>
+                    <p>
+                        Vi går igenom din bokning och när vi
+                        <br>
+                        bekräftar uppdraget får du en
+                        <br>
+                        automatisk bekräftelse via mailen.
+                    </p>    
+                </div>
             </div>
 
-            <div class="info-block" style="margin-left:10px;">
-                <h3>Steg 3</h3>
-                <h4>Boka smidigt via vårt onlineformulär.</h4>
-                <p>
-                    Du väljer allt från datum till nyckel info.
-                    <br>
-                    All nödvändig information finns i
-                    <br>
-                    formuläret när du bokar.
-                 </p>
+            <div id="info-block-3" class="info-block">
+                <img class="info-block-img" src="./images/steg3.jpg" alt="info block image" loading="lazy">
+                <div>
+                    <h3>Steg 3</h3>
+                    <h4>Se till att personalen kommer in.</h4>
+                    <p>
+                        Du behöver inte vara på plats under
+                        <br>
+                        städningen & självklart har du
+                        <br>
+                        garanti på städningen i hela 14 dagar.
+                    </p>  
+                </div>
             </div>
         </div>
 
         <div class="button-container section-margin">
-            <a class="prices-button">
+            <a class="prices-button" href="booking-page.html">
                 <div class="btn-text">SE PRISER <img class="btn-arrow-2" src="./images/arrow.png" alt="right arrow" loading="lazy"></div>
                 <div class="second-btn-text">SMIDIG ONLINEBOKNING</div>
             </a>
@@ -200,59 +221,138 @@
                     </div>
                 </div>
 
-                <section id="faq" class="centered-section">
-                    <h3 class="centered-text">FAQ - Vanliga Frågor:</h3>
+                <section id="checklist" class="centered-section" style="padding-bottom:0;">
+                    <h3 class="centered-text">Vad ingår i en flyttstädning?</h3>
                     <div class="faq-container">
                         <div class="faq-item-container">
                             <div class="faq-item">
-                                <div class="faq-question">Vad kostar en flyttstädning?</div>
+                                <div class="faq-question">Alla Rum</div>
                                 <div class="faq-answer">
-                                    Vi håller ett fast pris baserat på bostadens m2. <br>
-                                    Självklart kan du skräddarsy din flyttstädning med oss och bokar du även flytthjälp får du hela 15% rabatt på flyttstädningen. <br><br>
-                                    <a href="booking-page.html" class="faq-answer-link">SE PRISER HÄR.</a>
+                                    <div id="checklist-all" class="checklist-section">
+                                        <ul>
+                                            <li><span class="checkmark">✔</span> Dammsugning samt våttorkning av golv.</li>
+                                            <li><span class="checkmark">✔</span> Torkning av målade ytor som t ex dörrar, foder, fönsterbågar, snickerier, golvsocklar.</li>
+                                            <li><span class="checkmark">✔</span> Fönsterputsning på samtliga sidor.(Förutsatt att fönstren kan delas och vi kommer åt att rengöra invändigt, mellan och utvändigt på ett normalt sätt).</li>
+                                            <li><span class="checkmark">✔</span> Avdamning samt torkning av element samt utrymmet mellan element och vägg där det är möjligt. (Vi delar inte och monterar inte bort eller isär några element).</span></li>
+                                            <li><span class="checkmark">✔</span> Rengöring av garderober (invändigt, utvändigt samt ovanpå).</span></li>
+                                            <li><span class="checkmark">✔</span> Väggar och tak avdammas.</span></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                     
                             <div class="faq-item">
-                                <div class="faq-question">Hur lång tid tar städningen?</div>
-                                <div class="faq-answer">Förutsatt att bostaden inte är onormalt ingrodd eller katastrof på något sätt, flyttstädar vi normalt ca: 1 timme / 10m2.</div>
-                            </div>
-                    
-                            <div class="faq-item">
-                                <div class="faq-question">Hur gör jag med nyckel?</div>
-                                <div class="faq-answer">För oss spelar det inte så stor roll, bara vi kommer in.
-                                    Du kan antingen möta personalen på plats, lämna olåst eller gömma en nyckel.
-                                    <br><br>
-                                    Vill du lämna en nyckel på vårt kontor behöver vi få den senast 3 dagar innan städdatum.</div>
+                                <div class="faq-question">Kök</div>
+                                <div class="faq-answer">
+                                    <div id="checklist-kitchen" class="checklist-section">
+                                        <ul>
+                                            <li><span class="checkmark">✔</span> Väggar och kakel avdammas och rengörs från fettfläckar.</li>
+                                            <li><span class="checkmark">✔</span> Skåp och lådor rengörs både invändigt och utvändigt.</li>
+                                            <li><span class="checkmark">✔</span> Skärbrädor rengörs.</li>
+                                            <li><span class="checkmark">✔</span> Diskbänk torkas.</span></li>
+                                            <li><span class="checkmark">✔</span> (Spisen dras ut av dig) Vi rengör spisen på alla sidor även plattor, ugn, galler, plåtar och vred.
+                                                OBS! Om ugnsglaset är dubbelt och du vill ha rengjort mellan, se då till att skruva bort glaset då vi av säkerhetsskäl inte gör detta!</span></li>
+                                            <li><span class="checkmark">✔</span> Rengöring av väggar och golv runt spisens normala placering.</span></li>
+                                            <li><span class="checkmark">✔</span>Kyl och frys frostas av innan vi kommer (vid tillval tillkommer en kostnad på 200kr efter Rut) de luftas och våttorkas både in- och utvändigt.</span></li>
+                                            <li><span class="checkmark">✔</span> Köksfläkt och ventil rengörs utvändigt.</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                 
                         <div class="faq-item-container">
                             <div class="faq-item">
-                                <div class="faq-question">Vad ingår i en flyttstädning?</div>
-                                <div class="faq-answer">Vi följer mäklarsamfundets riktlinjer.
-                                    Vår flyttstädnings checklista beskriver vad som ingår rum för rum.<br><br>
-                                    <a href="checklist.html" class="faq-answer-link">SE CHECKLISTAN HÄR.</a>
+                                <div class="faq-question">Badrum</div>
+                                <div class="faq-answer">
+                                    <div id="checklist-bathroom" class="checklist-section">
+                                        <ul>
+                                            <li><span class="checkmark">✔</span> Vi följer mäklarsamfundets riktlinjer.</li>
+                                            <li><span class="checkmark">✔</span> Rengöring av kakel och klinkers noggrant och ser till att eventuella avlagringar försvinner.</li>
+                                            <li><span class="checkmark">✔</span> Toalett rengörs.</li>
+                                            <li><span class="checkmark">✔</span> Rengöring av hela badkaret samt bakom och undertill om detta är utdraget, golvbrunnen är tillval.</li>
+                                            <li><span class="checkmark">✔</span> Rengöring av glasdörrar på duschen för att få bort eventuella kalk och fettavlagringar.</span></li>
+                                            <li><span class="checkmark">✔</span> Rengöring av badrumsskåpens alla ytor samt speglar.</span></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                     
                             <div class="faq-item">
-                                <div class="faq-question">Har ni städgaranti?</div>
-                                <div class="faq-answer">För din trygghet har vi självklart garanti på flyttstädningen.
-                                    Städgarantin gäller i hela 14 dagar räknat med städdagen.
+                                <div class="faq-question">Tvättrum</div>
+                                <div class="faq-answer">
+                                    <div id="checklist-laundry" class="checklist-section">
+                                        <ul>
+                                            <li><span class="checkmark">✔</span> Förutom nämnda åtgärder högst upp:</li>
+                                            <li><span class="checkmark">✔</span> Tvättmaskin och torktumlare torkas utvändigt (Dessa skall vara utdragna om rengöring bakom önskas).</li>
+                                            <li><span class="checkmark">✔</span> Torkar bort allt ludd från filtret och tvättmedelsrester från tvättmedelsfacken.</li>
+                                            <li><span class="checkmark">✔</span> Rengöring av glasdörrar på duschen för att få bort eventuella kalk och fettavlagringar.</span></li>
+                                            <li><span class="checkmark">✔</span> Rengöring av bänkar, ventiler och golvbrunn vid tillva</span></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                    
-                            <div class="faq-item">
-                                <div class="faq-question">Behöver jag vara på plats?</div>
-                                <div class="faq-answer">Nej du behöver inte vara på plats under själva städningen och du behöver inte besikta om du inte har tid.
-                                    <br><br>
-                                    Dock uppskattar vi självklart om du kan komma och besikta städningen medans personalen fortfarande är på plats vilket underlättar för alla parter.</div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="faq-item faq-question-full" style="margin-bottom:0;">
+                        <div class="faq-question">Tillval - Skräddarsy dina tillval</div>
+                        <div class="faq-answer">
+                            <div class="checklist-section">
+                                <h2>Balkong/Uteplats</h2>
+                                <ul>
+                                    <li><span class="checkmark">✔</span> Sopning/Dammsugning av balkongens/uteplatsens golv.</li>
+                                    <li><span class="checkmark">✔</span> Torkning av balkongräcken, dropplåtar samt eventuella stänger samt balkongväggens nedre plåtar/glas invändigt.</li>
+                                    <li><span class="checkmark">✔</span> Putsning av glaset så bra som det går att komma åt om detta önskas och beställs.</li>
+                                    <li><span class="checkmark">✔</span> Vid tillval av inglasad balkong putsas även alla balkongfönster. <br> OBS: Balkongfönster som ej är invikbara måste vara nedmonterade när vi kommer på plats om putsning av utsidan önskas.</li>
+                                </ul>
+                            </div>
+                    
+                            <div class="checklist-section">
+                                <h2>Förråd, Garage, Vind m.m.</h2>
+                                <ul>
+                                    <li><span class="checkmark">✔</span> Golvytor sopas samt enklare avdamning och eventuella fönster putsas.</li>
+                                </ul>
+                            </div>
+                    
+                            <div class="checklist-section">
+                                <h2>Avfrostning frys</h2>
+                                <ul>
+                                    <li><span class="checkmark">✔</span> Is avfrostas under tiden städningen utförs. </li>
+                                    <li><span class="checkmark">✔</span> <span class="note">(Skulle frysen vara så pass isig att avfrostning inte hinner färdigställas, kan timdebitering läggas till för färdigställande av avfrostning)</span></li>
+                                </ul>
+                            </div>
+                    
+                            <div class="checklist-section">
+                                <h2>Kamin / Öppen spis</h2>
+                                <ul>
+                                    <li><span class="checkmark">✔</span> Dammsugning av aska.</li>
+                                    <li><span class="checkmark">✔</span> In & utvändig våttorkning.</li>
+                                    <li><span class="checkmark">✔</span> Glas i luckan rengörs.</li>
+                                </ul>
+                            </div>
+                    
+                            <div class="checklist-section">
+                                <h2>Möbler</h2>
+                                <ul>
+                                    <li><span class="checkmark">✔</span> Dammsugning av soffa/säng.</li>
+                                    <li><span class="checkmark">✔</span> Dammtorkning.</li>
+                                    <li><span class="checkmark">✔</span> <span class="note">(Obs! Vi tillhandahåller ej några specialverktyg eller maskin för möbel/matt rengöring eller liknande.)</span></li>
+                                </ul>
+                            </div>
+                    
+                            <div class="checklist-section">
+                                <h2>Vattenlås / Golvbrunnar</h2>
+                                <ul>
+                                    <li><span class="checkmark">✔</span> Vattenlåset öppnas och rengörs invändigt.</li>
+                                    <li><span class="checkmark">✔</span> <span class="note">(Obs! Vi monterar ej isär rör eller liknande för invändig rengöring, djupare rengöring utförs av spolfirma.)</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="button-container">
-                        <a href="booking-page.html" class="discount-button">
+                        <a href="booking-page.html" class="discount-button-2 section-margin">
                             <div class="btn-text white-color">SE PRISER <img class="btn-arrow-2" src="./images/arrow.png" alt="right arrow" loading="lazy"></div>
                             <div class="second-btn-text">SMIDIG ONLINEBOKNING</div>
                         </a>
@@ -261,7 +361,7 @@
             
         
                 <div>
-                    <div class="article-content" style="width:65%;">
+                    <div class="article-content" style="width:65%; padding-top:0;">
                         <h1>Stockholms bästa flyttstäd</h1>
                         <p>Namnet <strong>Flyttstädning Partner</strong> är varumärkes registrerat hos patent och registreringsverket. Varumärkesregistreringen är du välkommen att se här. Vid sökfältet till höger om "text i märket" skriver du "Flyttstädning Stockholm".</p>
                         <p>Vi utför flytthjälp och flyttstäd i hela Stockholm samt kringliggande städer. Vi håller pressade flyttstädnings priser, samtidigt som vi håller den högsta möjliga kvaliteten på både flytt och städtjänsterna.</p>
@@ -282,11 +382,11 @@
 
 
     <!-- FAQ SECTION -->
-  <!--   <section id="faq" class="centered-section">
+    <section id="faq" class="centered-section" style="padding-bottom:0;">
         <h3 class="centered-text">FAQ - Vanliga Frågor:</h3>
         <div class="faq-container">
             <div class="faq-item-container">
-                <div class="faq-item">
+                <div class="faq-item faq-box ">
                     <div class="faq-question">Vad kostar en flyttstädning?</div>
                     <div class="faq-answer">
                         Vi håller ett fast pris baserat på bostadens m2. <br>
@@ -295,12 +395,12 @@
                     </div>
                 </div>
         
-                <div class="faq-item">
+                <div class="faq-item faq-box ">
                     <div class="faq-question">Hur lång tid tar städningen?</div>
                     <div class="faq-answer">Förutsatt att bostaden inte är onormalt ingrodd eller katastrof på något sätt, flyttstädar vi normalt ca: 1 timme / 10m2.</div>
                 </div>
         
-                <div class="faq-item">
+                <div class="faq-item faq-box " style="margin-bottom:0;">
                     <div class="faq-question">Hur gör jag med nyckel?</div>
                     <div class="faq-answer">För oss spelar det inte så stor roll, bara vi kommer in.
                         Du kan antingen möta personalen på plats, lämna olåst eller gömma en nyckel.
@@ -310,22 +410,21 @@
             </div>
     
             <div class="faq-item-container">
-                <div class="faq-item">
+                <div class="faq-item faq-box ">
                     <div class="faq-question">Vad ingår i en flyttstädning?</div>
                     <div class="faq-answer">Vi följer mäklarsamfundets riktlinjer.
                         Vår flyttstädnings checklista beskriver vad som ingår rum för rum.<br><br>
-                        <a href="checklist.html" class="faq-answer-link">SE CHECKLISTAN HÄR.</a>
                     </div>
                 </div>
         
-                <div class="faq-item">
+                <div class="faq-item faq-box ">
                     <div class="faq-question">Har ni städgaranti?</div>
                     <div class="faq-answer">För din trygghet har vi självklart garanti på flyttstädningen.
                         Städgarantin gäller i hela 14 dagar räknat med städdagen.
                     </div>
                 </div>
         
-                <div class="faq-item">
+                <div class="faq-item faq-box" style="margin-bottom:0;">
                     <div class="faq-question">Behöver jag vara på plats?</div>
                     <div class="faq-answer">Nej du behöver inte vara på plats under själva städningen och du behöver inte besikta om du inte har tid.
                         <br><br>
@@ -333,17 +432,20 @@
                 </div>
             </div>
         </div>
-        <div class="button-container">
-            <a href="booking-page.html" class="discount-button red-btn">SE PRISER <img class="btn-arrow" src="./images/arrow.png" alt="right arrow"></a>
+        <div class="button-container section-margin">
+            <a href="booking-page.html" class="discount-button-2 green-btn">
+                <div class="btn-text white-color">SE PRISER <img class="btn-arrow-2" src="./images/arrow.png" alt="right arrow" loading="lazy"></div>
+                <div class="second-btn-text">SMIDIG ONLINEBOKNING</div>
+            </a>
         </div>
-    </section> -->
+    </section> 
 
     <footer id="footer">
         <div class="footer-container centered-section">
             <h2>Med Flyttstädning Stockholm™ är din bostad i trygga händer.</h2>
             <!-- MAPS -->
             <div class="map-container">
-                <div style="width: 100%; height:100%;"><iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Franz%C3%A9ngatan%2030+(Flytthj%C3%A4lp)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps systems</a></iframe></div>
+                <div style="width: 100%; height:100%;"><iframe id="iframe" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Franz%C3%A9ngatan%2030+(Flytthj%C3%A4lp)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps systems</a></iframe></div>
             </div>
             <div class="footer-inner-container">
                 <div class="footer-text-section paragraph-2tv2o3MU1B text-output cparagraph-2tv2o3MU1B none noBorder radius0 none" data-animation-class="">
@@ -360,9 +462,9 @@
                 </div>
                 <div class="footer-text-section">
                     <h3>Intregritets Policy</h3>
-                    <p class="blue-color">GDPR</p>
-                    <p class="blue-color">Intregritets Policy</p>
-                    <p class="blue-color">Avtal &/ Villkor</p>
+                    <a href=""><p class="blue-color">GDPR</p></a>
+                    <a href=""><p class="blue-color">Intregritets Policy</p></a>
+                    <a href=""><p class="blue-color">Avtal &/ Villkor</p></a>
                 </div>
                 <div class="footer-text-section">
                     <h3>Om Oss</h3>

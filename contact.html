@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flyttstädning Stockholm</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
-<body class="booking-body">
+<body class="booking-body" style="background-color:white !important;">
     <header>
         <nav class="navbar">
             <img onClick="scrollToElement('nav-scroll');" id="logo" src="./images/logo.gif" alt="logo" loading="eager">
@@ -17,44 +28,71 @@
             </div>
             <ul class="nav-links" id="nav-menu">
                 <li><a href="index.html">Hem</a></li>
-                <li><a href="booking-page.html">Priser/Boka Online</a></li>
+                <li><a href="booking-page.html">Priser / Boka Online</a></li>
                 <li><a href="whyus.html">Varför Välja Oss?</a></li>
-                <li><a href="checklist.html">Checklista</a></li>
+                <li><a onClick="redirectToIndex('checklist');">Checklista</a></li>
                 <li><a href="contact.html">Kontakta Oss</a></li>
             </ul>
         </nav>
     </header>
     <div id="nav-scroll"></div>
 
-    <img src="./images/cleaningbg3.jpg" alt="cleaning service" class="background-image" loading="eager">
+    <div class="contact-container" style="width:100vw; height:50%; margin-top:140px;">
+        <div class="half-section">
+            <img class="" src="./images/team2.png" alt="team">
+        </div>
 
-    <div class="contact-container">
-            <div class="col col-text col-left">
-            <div class="inner spacing text-align-center contact_spacing">
 
-            <div class="contact-inner-container">
-                <img class="big-icon" src="./images/cleaning.png" alt="cleaning" loading="eager">
-                <h1><strong>KONTAKTA OSS</strong></h1>
-                
-                <p><strong>Telefon 08:00 - 17:00 <br>
-                <a style="color:#81E546; font-size:24px;" href="tel:0105855801">0105855801</a></strong></p>
-                            
-                <p><span style="color: #000;">Övrig tid: Fyll i formuläret nedan</span> <br>
-                <strong><span style="color: #81E546;">Vill du boka flyttstädning?</span><br>
-                <span style="color: #81E546;"> Boknings formuläret hittar du <a title="Boka flyttstädning" href="/priser" style="color:white; text-decoration: underline;">här!</a></span></strong></p>
+        <div class="half-section text-section">
+            <h1 class="smaller-h1"><strong>KONTAKTA OSS</strong></h1>
+            <p class="big-line-height">
+                Har du frågor, funderingar eller behöver du hjälp? 
+                <br>
+                Tveka inte att kontakta oss via formuläret nedan. 
+                <br>
+                Vi ser fram emot att höra från dig och svarar så snart vi kan!
+            </p>
+            <a onClick="redirectToIndex('faq');" class="contact-button">
+                <img src="./images/qa.png" alt="faq icon" class="btn-icon"> Vanliga Frågor
+            </a>
+        </div>
+    </div>
+
+    <div STYLE="WIDTH:100%; background-color:#EAE8E1;">
+    <div class="contact-container" style="padding-top:60px; margin-top:3px;">
+            <div class="half-section contact-info">
+                <div class="call-box">
+                    <div class="phone-icon"><img src="./images/phone-call.png" alt="phone icon" style="width:32px;"> </div>
+                    <h2>Ring oss direkt!</h2>
+                    <p>Vi är här för att hjälpa dig!</p>
+                    <p>Telefon alla dagar 08:00 - 17:00</p>
+                    <a class="phone-number">Tel: 0105855801</a>
+                </div>
+
+                <div class="call-box">
+                    <div class="phone-icon"><img src="./images/booking-online.png" alt="phone icon" > </div>
+                    <h2>Vill du boka flyttstäd?</h2>
+                    <p>Bokningsformuläret hittar du nedanför.</p>
+                    <div class="button-container">
+                        <a onClick="redirectToIndex('faq');" class="contact-button" style="margin-top:0; background-color:#37ca37">
+                             Boka Direkt!
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-container">
-                <form class="form-inner-container" id="id-contact-form" method="post" action="/include/contact.php" enctype="multipart/form-data">
-                <fieldset id="contact-form"><label>Namn: *</label><br>
-                <input name="name2" required="" type="text" placeholder="Anders"><br>
-                <label>E-post: *</label><br>
-                <input name="email" required="" type="email" placeholder="a.andersson@gmail.com"><br>
-                <label>Telefonnummer: *</label><br>
-                <input name="phone_number" required="" type="text" placeholder=""><br>
-                <input name="subject" required="" type="hidden"> <label>Meddelande: *</label><br>
-                <textarea cols="40" name="message" required="" rows="10"></textarea><br>
-                <input id="contact-button" type="submit" value="Skicka meddelande"></fieldset>
+            <div class="half-section contact-form-container">
+                <h2 class="contact-header">Skicka ett meddelande</h2>
+                <form id="id-contact-form" method="post" action="/include/contact.php" enctype="multipart/form-data">
+                <fieldset id="contact-form"><!-- <label>Namn: *</label><br> -->
+                <input name="name2" required="" type="text" placeholder="Namn">
+               <!--  <label>E-post: *</label><br> -->
+                <input name="email" required="" type="email" placeholder="Mailadress">
+              <!--   <label>Telefonnummer: *</label><br> -->
+                <input name="phone_number" required="" type="text" placeholder="Telefonnummer">
+                <input name="subject" required="" type="hidden"><!--  <label>Meddelande: *</label> -->
+                <textarea cols="40" name="message" required="" rows="10" placeholder="Meddelande"></textarea><br>
+                <input id="contact-button" type="submit" value="SKICKA" style="margin-right: auto; display: block; width:100%; font-size:20px;"></fieldset>
                 <div style="display:none;visibility:hidden;">
                 <input type="hidden" id="Ncode" name="code" value="1726130289">
                 <input type="text" name="url" value=""> (Lämna tom)
@@ -64,6 +102,9 @@
             </div>
             </div>
         </div>
+        
+
+        </div>
     </div>
 
     <footer id="footer">
@@ -71,17 +112,13 @@
             <h2>Med Flyttstädning Stockholm™ är din bostad i trygga händer.</h2>
             <!-- MAPS -->
             <div class="map-container">
-                <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093666!2d144.95373631531697!3d-37.816279779751554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5779a74ee620c1!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1602314217045!5m2!1sen!2sus" 
-                width="100%" 
-                height="100%" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
+                <div style="width: 100%; height:100%;"><iframe id="iframe" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Franz%C3%A9ngatan%2030+(Flytthj%C3%A4lp)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps systems</a></iframe></div>
             </div>
             <div class="footer-inner-container">
-                <div class="footer-text-section paragraph-2tv2o3MU1B text-output cparagraph-2tv2o3MU1B none noBorder radius0 none" data-animation-class=""><div><h2><strong><br>Flyttstädning<br>Stockholm™</strong></h2></div></div>
+                <div class="footer-text-section paragraph-2tv2o3MU1B text-output cparagraph-2tv2o3MU1B none noBorder radius0 none" data-animation-class="">
+                    <img class="footer-logo" src="./images/logo_mail.jpg" height="95" width="95" alt="logo" loading="lazy">
+                    <h2><strong>Flyttstädning<br>Stockholm™</strong></h2>
+                </div>
 
                 <div class="footer-text-section">
                     <h3>Kontakta Oss:</h3>
@@ -92,9 +129,9 @@
                 </div>
                 <div class="footer-text-section">
                     <h3>Intregritets Policy</h3>
-                    <p class="blue-color">GDPR</p>
-                    <p class="blue-color">Intregritets Policy</p>
-                    <p class="blue-color">Avtal &/ Villkor</p>
+                    <a href=""><p class="blue-color">GDPR</p></a>
+                    <a href=""><p class="blue-color">Intregritets Policy</p></a>
+                    <a href=""><p class="blue-color">Avtal &/ Villkor</p></a>
                 </div>
                 <div class="footer-text-section">
                     <h3>Om Oss</h3>
