@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -20,9 +21,15 @@
             </div>
             <ul class="nav-links" id="nav-menu">
                 <li><a href="index.html">Hem</a></li>
-                <li><a href="booking-page.html">Priser / Boka Online</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn">Priser / Boka Online</a>
+                    <ul class="dropdown-content">
+                        <li><a href="booking.html">Flytthjälp</a></li>
+                        <li><a href="booking-page.html">Flyttstädning</a></li>
+                    </ul>
+                </li>
                 <li><a href="whyus.html">Varför Välja Oss?</a></li>
-                <li><a onClick="redirectToIndex('footer');">Checklista</a></li>
+                <li><a onClick="scrollToElement('checklist')">Checklista</a></li>
                 <li><a href="contact.html">Kontakta Oss</a></li>
             </ul>
         </nav>

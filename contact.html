@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -28,16 +28,22 @@
             </div>
             <ul class="nav-links" id="nav-menu">
                 <li><a href="index.html">Hem</a></li>
-                <li><a href="booking-page.html">Priser / Boka Online</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn">Priser / Boka Online</a>
+                    <ul class="dropdown-content">
+                        <li><a href="booking.html">Flytthjälp</a></li>
+                        <li><a href="booking-page.html">Flyttstädning</a></li>
+                    </ul>
+                </li>
                 <li><a href="whyus.html">Varför Välja Oss?</a></li>
-                <li><a onClick="redirectToIndex('checklist');">Checklista</a></li>
+                <li><a onClick="scrollToElement('checklist')">Checklista</a></li>
                 <li><a href="contact.html">Kontakta Oss</a></li>
             </ul>
         </nav>
     </header>
     <div id="nav-scroll"></div>
 
-    <div class="contact-container" style="width:100vw; height:50%; margin-top:140px;">
+    <div class="contact-container" style="width:100vw; margin-top:140px;">
         <div class="half-section">
             <img class="" src="./images/team2.png" alt="team">
         </div>
@@ -59,7 +65,7 @@
     </div>
 
     <div STYLE="WIDTH:100%; background-color:#EAE8E1;">
-    <div class="contact-container" style="padding-top:60px; margin-top:3px;">
+    <div class="contact-container" style="padding:60px 0; margin-top:0;">
             <div class="half-section contact-info">
                 <div class="call-box">
                     <div class="phone-icon"><img src="./images/phone-call.png" alt="phone icon" style="width:32px;"> </div>
@@ -74,7 +80,7 @@
                     <h2>Vill du boka flyttstäd?</h2>
                     <p>Bokningsformuläret hittar du nedanför.</p>
                     <div class="button-container">
-                        <a onClick="redirectToIndex('faq');" class="contact-button" style="margin-top:0; background-color:#37ca37">
+                        <a onClick="redirectToIndex('faq');" href="booking-page.html" class="contact-button" style="margin-top:0; background-color:#37ca37">
                              Boka Direkt!
                         </a>
                     </div>

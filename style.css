@@ -215,7 +215,6 @@ section {
     font-size:var(--HEADER-TEXT);
     font-family: "Rubik", sans-serif !important;
     margin:var(--BIG-MARGIN);
-    margin-left:0;
     width:auto;
 }
 
@@ -700,6 +699,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: visible;
     padding: 10px 20px;
     transition: transform 0.3s ease, background-color 0.3s ease;
     background-color: transparent;
@@ -895,26 +895,33 @@ nav ul li a:hover::after {
     will-change: transform;
 }
 
+.dropdown {
+    position: relative;
+}
+
 .dropdown-content {
     display: none; /* Hide dropdown by default */
-    position: fixed;
+    position: absolute;
+    top:30px;
+    left:-15px;
+    width:100%;
     background-color: #f9f9f9;
-    width: 168px;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin-left: 4.5%;
+    z-index: 100;
     text-align: left;
+    margin-left:20px;
 }
 
 .dropdown-content li {
     display: block;
+    padding:0 20px;
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 12px 0;
+    padding: 0;
     text-decoration: none;
     display: block;
+    width:fit-content;
 }
 
 .dropdown-content a:hover {
@@ -922,10 +929,10 @@ nav ul li a:hover::after {
 }
 
 /* Show the dropdown when hovering over the dropdown button */
-.dropdown:hover .dropdown-content {
+/* .dropdown:hover .dropdown-content {
     display: block;
 }
-
+ */
 /* Media Queries */
 
 @media only screen and (min-width: 3200px) and (min-height: 1200px) {
@@ -952,6 +959,18 @@ nav ul li a:hover::after {
 
 
 @media only screen and (max-width: 1026px) {
+    .dropdown-content {
+        position: relative;
+        box-shadow: none;
+        background-color: var(--SOFT-COLOR);
+        top:0;
+        left:0;
+        margin-left:0;
+    }
+
+    .dropdown-content li {
+        padding-left:0;
+    }
 
     .nav-info-list{
         display: none;
@@ -1747,6 +1766,8 @@ main {
 /* =============== CONTACT ================ */
 
 .text-section {
+    height:auto;
+    text-align: center !important;
 }
 
 .contact-icon {
@@ -1772,7 +1793,7 @@ main {
     padding: 15px;
     border-radius: var(--BORDER-RADIUS);
     text-align: center;
-    width:500px;
+    width:AUTO;
     height:260px;
     border-radius: var(--BORDER-RADIUS);
     display:flex;
@@ -1784,6 +1805,7 @@ main {
 .call-box h2 {
     color: #333333;
     margin:0;
+    margin-bottom:10px;
     font-size:26px;
 }
 
@@ -1987,6 +2009,10 @@ footer {
 
 
 @media only screen and (max-width: 1026px) {
+    .call-box {
+        width:100%;
+    }
+
     .footer-inner-container {
         display: flex;
         flex-direction: column;
@@ -2421,6 +2447,10 @@ footer {
 
 @media only screen and (max-width: 1026px) {
     .image-content {
+        width:100%;
+    }
+
+    .prices-container {
         width:100%;
     }
 }

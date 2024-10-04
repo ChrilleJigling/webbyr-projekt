@@ -14,19 +14,6 @@ $(document).ready(function() {
     }
 });
 
-
-/* $( document ).ready(function() {
-    $(window).width() > 1025 && ($(function() {
-        var e = 0;
-        window.addEventListener("mouseout", function(o) {
-            (e = o.clientY) < 0 ? $("#exit-booking-popup").addClass("show-popup") : $("#exit-booking-popup").on("mouseleave", function(e) {
-                $("#exit-booking-popup").removeClass("show-popup")
-            })
-        }, !1)
-    })
-});
- */
-
 document.addEventListener("DOMContentLoaded", function() {
     !function e(o, t) {
         var s = document.querySelectorAll(".hours")
@@ -132,6 +119,36 @@ menuIcon.addEventListener('click', () => {
     navMenu.classList.toggle('open');
 });
 
+
+// Add click event to dropdown buttons
+document.querySelectorAll('.dropbtn').forEach(function(dropdownBtn) {
+    dropdownBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        // Toggle the dropdown content display
+        var dropdownContent = this.nextElementSibling;
+        var isActive = dropdownContent.style.display === "block";
+        // Close all other dropdowns
+        document.querySelectorAll('.dropdown-content').forEach(function(content) {
+            content.style.display = "none";
+        });
+        // Toggle the clicked dropdown content
+        if (!isActive) {
+            dropdownContent.style.display = "block";
+        }
+    });
+});
+
+// Close the dropdown if clicking outside
+document.addEventListener('click', function(event) {
+    var isClickInside = event.target.closest('.dropdown');
+    
+    // If the click is outside any dropdown, close all dropdowns
+    if (!isClickInside) {
+        document.querySelectorAll('.dropdown-content').forEach(function(content) {
+            content.style.display = "none";
+        });
+    }
+});
 
 /* Scroll To Element function with id as parameter */
 function scrollToElement(id) {
