@@ -2585,6 +2585,7 @@ footer {
     display:flex;
     margin-bottom:var(--BIGGEST-MARGIN);
     width: 100%;
+    justify-content: center;
 }
 
 .info-section > img {
@@ -2930,12 +2931,24 @@ textarea {
     }
 
     .form-inner-container {
-        padding:20px;
+        padding:0;
         text-align: center;
     }
 
     .map-container {
         height:41.5vh;
+    }
+
+    ul li {
+        padding-left: 0;
+    }
+
+    #iframe-container {
+        width:auto;
+    }
+
+    .booking-img-container {
+        flex-direction: column-reverse;
     }
 }
 
@@ -2975,6 +2988,7 @@ textarea {
     }
     
     .info-section > img {
-        width:14%;
+        width:19%;
+        margin:0 var(--MARGIN);
     }
 }
