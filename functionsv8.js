@@ -118,39 +118,6 @@ menuIcon.addEventListener('click', () => {
     navMenu.classList.toggle('open');
 });
 
-/* const dropdownItems = document.querySelectorAll('.dropbtn');
-dropdownItems.forEach(item => {
-    item.addEventListener('click', () => {
-        // Collapse all other items
-        dropdownItems.forEach(i => {
-            if (i !== item) {
-                i.style.display = "none";
-            }
-        });
-        // Toggle 'active' class on the clicked item
-        document.querySelector('.dropdown-content').style.display = "block";
-    });
-}); */
-
-
-// Add click event to dropdown buttons
-/* document.querySelectorAll('.dropbtn').forEach(function(dropdownBtn) {
-    dropdownBtn.addEventListener('click', function(event) {
-        event.preventDefault();
-        // Toggle the dropdown content display
-        var dropdownContent = this.nextElementSibling;
-        var isActive = dropdownContent.style.display === "block";
-        // Close all other dropdowns
-        document.querySelectorAll('.dropdown-content').forEach(function(content) {
-            content.style.display = "none";
-        });
-        // Toggle the clicked dropdown content
-        if (!isActive) {
-            dropdownContent.style.display = "block";
-        }
-    });
-}); */
-
 // Close the dropdown if clicking outside
 document.addEventListener('click', function(event) {
     var isClickInside = event.target.closest('.dropdown');
