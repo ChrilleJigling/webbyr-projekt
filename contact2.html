@@ -19,67 +19,33 @@
 </head>
 <body class="booking-body" style="background-color:white !important;">
     <header>
-        <nav id="nav" class="navbar">
-            ##if_url_is_index { ##	
-                <img onClick="scrollToElement('nav-scroll');" id="logo" src="./images/logo.gif" alt="logo ##title_tag##" loading="eager">
-            ## } end_if##	
-            ##if_url_is_not_index { ##	
-                <a href="##home_url##" class="nav-logo-link"><img id="logo" src="./images/logo.gif" alt="logo" loading="eager"></a>
-            ## } end_if##	
-
-            <div class="nav-info-container">
-                <div class="nav-info-block" onClick="scrollToElement('footer');" loading="eager">
-                    <img src="images/map.webp" alt="map icon">
-                    <span>Franzéngatan 30,<br>112 16 Stockholm</span>
-                </div>
-
-                <div class="nav-info-block" onClick="scrollToElement('footer');" loading="eager"> 
-                    <img src="images/time.webp" alt="clock icon">
-                    <span>Mån - Sön:<br>08:00 - 17:00</span>
-                </div>
-
-                <a href="tel:+010 58 558 08">
-                    <div class="nav-info-block">
-                        <img src="images/phone-call.webp" alt="phone icon" loading="eager">
-                        <span>Ring nu:<br>010 58 558 08</span>
-                    </div>
-                </a>
-            </div>
-
-            ##if_url_is_priser { ##	
-            ##if_url_is_flytthjälp { ##	
-
+        <nav class="navbar">
+            <img onClick="scrollToElement('nav-scroll');" id="logo" src="./images/logo.gif" alt="logo" loading="eager">
             <div class="menu-icon" id="menu-icon">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
-            
             <ul class="nav-links" id="nav-menu">
                 <li><a href="index.html">Hem</a></li>
                 <li class="dropdown">
                     <a class="dropbtn">Priser / Boka Online</a>
                     <ul class="dropdown-content">
-                        <li><a href="/flytthjalp">Flytthjälp</a></li>
-                        <li><a href="/priser">Flyttstädning</a></li>
+                        <li><a href="booking.html">Flytthjälp</a></li>
+                        <li><a href="booking-page.html">Flyttstädning</a></li>
                     </ul>
                 </li>
                 <li><a href="whyus.html">Varför Välja Oss?</a></li>
                 <li><a onClick="scrollToElement('checklist')">Checklista</a></li>
                 <li><a href="contact.html">Kontakta Oss</a></li>
             </ul>
-
-            ## } end_if##	
-            ## } end_if##	
-            
         </nav>
     </header>
-
     <div id="nav-scroll"></div>
 
     <div class="contact-container" style="width:100vw; margin-top:140px;">
         <div class="half-section">
-            <img src="https://uploads.staticjw.com/tr/trappstadningistockholm/team2.webp" alt="team ##title_tag##">
+            <img class="" src="./images/team2.png" alt="team">
         </div>
 
 
@@ -93,7 +59,7 @@
                 Vi ser fram emot att höra från dig och svarar så snart vi kan!
             </p>
             <a onClick="redirectToIndex('faq');" class="contact-button">
-                <img src="https://uploads.staticjw.com/tr/trappstadningistockholm/qa.webp" alt="faq icon" class="btn-icon"> Vanliga Frågor
+                <img src="./images/qa.png" alt="faq icon" class="btn-icon"> Vanliga Frågor
             </a>
         </div>
     </div>
@@ -102,20 +68,20 @@
     <div class="contact-container" style="padding:60px 0; margin-top:0;">
             <div class="half-section contact-info">
                 <div class="call-box">
-                    <div class="phone-icon"><img src="https://uploads.staticjw.com/tr/trappstadningistockholm/phone-call.webp" alt="phone icon" style="width:32px;"> </div>
+                    <div class="phone-icon"><img src="./images/phone-call.png" alt="phone icon" style="width:32px;"> </div>
                     <h2>Ring oss direkt!</h2>
                     <p>Vi är här för att hjälpa dig!</p>
                     <p>Telefon alla dagar 08:00 - 17:00</p>
-                    <a class="phone-number" href="tel:0105855801">Tel: 0105855801</a>
+                    <a class="phone-number">Tel: 0105855801</a>
                 </div>
 
                 <div class="call-box">
-                    <div class="phone-icon"><img src="https://uploads.staticjw.com/tr/trappstadningistockholm/booking-online.webp" alt="phone icon" > </div>
+                    <div class="phone-icon"><img src="./images/booking-online.png" alt="phone icon" > </div>
                     <h2>Vill du boka flyttstäd?</h2>
                     <p>Bokningsformuläret hittar du nedanför.</p>
                     <div class="button-container">
-                        <a onClick="redirectToIndex('faq');" href="/priser" class="contact-button" style="margin-top:0; background-color:#37ca37">
-                            Boka Direkt!
+                        <a onClick="redirectToIndex('faq');" href="booking-page.html" class="contact-button" style="margin-top:0; background-color:#37ca37">
+                             Boka Direkt!
                         </a>
                     </div>
                 </div>
@@ -124,11 +90,13 @@
             <div class="half-section contact-form-container">
                 <h2 class="contact-header">Skicka ett meddelande</h2>
                 <form id="id-contact-form" method="post" action="/include/contact.php" enctype="multipart/form-data">
-                <fieldset id="contact-form">
+                <fieldset id="contact-form"><!-- <label>Namn: *</label><br> -->
                 <input name="name2" required="" type="text" placeholder="Namn">
+               <!--  <label>E-post: *</label><br> -->
                 <input name="email" required="" type="email" placeholder="Mailadress">
+              <!--   <label>Telefonnummer: *</label><br> -->
                 <input name="phone_number" required="" type="text" placeholder="Telefonnummer">
-                <input name="subject" required="" type="hidden">
+                <input name="subject" required="" type="hidden"><!--  <label>Meddelande: *</label> -->
                 <textarea cols="40" name="message" required="" rows="10" placeholder="Meddelande"></textarea><br>
                 <input id="contact-button" type="submit" value="SKICKA" style="margin-right: auto; display: block; width:100%; font-size:20px;"></fieldset>
                 <div style="display:none;visibility:hidden;">
@@ -140,6 +108,8 @@
             </div>
             </div>
         </div>
+        
+
         </div>
     </div>
 
