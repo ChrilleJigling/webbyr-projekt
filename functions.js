@@ -83,6 +83,7 @@ window.addEventListener('scroll', function() {
 
 /* FAQ section - click & collapse the FAQ's */
 const faqItems = document.querySelectorAll('.faq-item');
+
 faqItems.forEach(item => {
     item.addEventListener('click', () => {
         // Collapse all other items
@@ -118,23 +119,9 @@ menuIcon.addEventListener('click', () => {
     navMenu.classList.toggle('open');
 });
 
-/* const dropdownItems = document.querySelectorAll('.dropbtn');
-dropdownItems.forEach(item => {
-    item.addEventListener('click', () => {
-        // Collapse all other items
-        dropdownItems.forEach(i => {
-            if (i !== item) {
-                i.style.display = "none";
-            }
-        });
-        // Toggle 'active' class on the clicked item
-        document.querySelector('.dropdown-content').style.display = "block";
-    });
-}); */
-
 
 // Add click event to dropdown buttons
-/* document.querySelectorAll('.dropbtn').forEach(function(dropdownBtn) {
+document.querySelectorAll('.dropbtn').forEach(function(dropdownBtn) {
     dropdownBtn.addEventListener('click', function(event) {
         event.preventDefault();
         // Toggle the dropdown content display
@@ -149,7 +136,7 @@ dropdownItems.forEach(item => {
             dropdownContent.style.display = "block";
         }
     });
-}); */
+});
 
 // Close the dropdown if clicking outside
 document.addEventListener('click', function(event) {
@@ -182,12 +169,3 @@ function redirectToIndex(element) {
     window.location.href = "index.html#"+element;
 }
 
-function toggleDropdown() {
-    var dropdown = document.getElementById("dropdown-ul");
-    if (dropdown.style.display == "none") {
-        dropdown.style.display = "block"
-    } else {
-        dropdown.style.display = "none"
-    }
-}
- 
