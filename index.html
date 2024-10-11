@@ -1,412 +1,124 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
-
-##meta_tags##
-
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>##title_tag##</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-
-    ##if_url_is_priser { ##
-    <meta name="robots" content="noindex, nofollow">
-    ## } end_if##
-    ##if_url_is_flytthjalp { ##
-    <meta name="robots" content="noindex, nofollow">
-    ## } end_if##
-    ##if_url_is_omoss { ##
-    <meta name="robots" content="noindex, nofollow">
-    ## } end_if##
-    ##if_url_is_thanks { ##
-    <meta name="robots" content="noindex, nofollow">
-    ## } end_if##
-    ##if_url_is_kontakt { ##
-    <meta name="robots" content="noindex, nofollow">
-    ## } end_if##
-    ##if_url_is_avtal { ##
-    <meta name="robots" content="noindex, nofollow">
-    ## } end_if##
-    ##if_url_is_företag { ##
-    <meta name="robots" content="noindex, nofollow">
-    ## } end_if##
-
-##load_css##
-
+    <title>CrispDesigns</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
 </head>
 <body>
     <header>
-        <nav id="nav" class="navbar">
-            ##if_url_is_index { ##	
-                <img onClick="scrollToElement('nav-scroll');" id="logo" src="https://uploads.staticjw.com/tr/trappstadningistockholm/logo.gif" alt="logo ##title_tag##" loading="eager" width="293" height="73">
-            ## } end_if##	
-            ##if_url_is_not_index { ##	
-                <a href="##home_url##" class="nav-logo-link"><img id="logo" src="https://uploads.staticjw.com/tr/trappstadningistockholm/logo.gif" alt="logo" loading="eager" width="293" height="73"></a>
-            ## } end_if##	
-
-            <div class="nav-info-container">
-                <div class="nav-info-block" onClick="scrollToElement('footer');" loading="eager">
-                    <img src="https://uploads.staticjw.com/tr/trappstadningistockholm/map.webp" alt="map icon">
-                    <span>Franzéngatan 30,<br>112 16 Stockholm</span>
-                </div>
-
-                <div class="nav-info-block" onClick="scrollToElement('footer');" loading="eager"> 
-                    <img src="https://uploads.staticjw.com/tr/trappstadningistockholm/time.webp" alt="clock icon">
-                    <span>Mån - Sön:<br>08:00 - 17:00</span>
-                </div>
-
-                <a href="tel:+010 58 558 08">
-                    <div class="nav-info-block">
-                        <img src="https://uploads.staticjw.com/tr/trappstadningistockholm/phone-call.webp" alt="phone icon" loading="eager">
-                        <span>Ring nu:<br>010 58 558 08</span>
-                    </div>
-                </a>
-            </div>
-
-            ##if_url_is_not_priser { ##	
-            ##if_url_is_not_flytthjalp { ##	
-            <div class="menu-icon" id="menu-icon">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            
-            <ul class="nav-links" id="nav-menu">
-                <li><a class="nav-link" href="index.html">Hem</a></li>
-                <li class="dropdown">
-                    <a class="nav-link" onClick="toggleDropdown(this);">Priser / Boka Online</a>
-                    <ul id="dropdown-ul" class="dropdown-content" style="display:none;">
-                        <li><a href="/flytthjalp">Flytthjälp</a></li>
-                        <li><a href="/priser">Flyttstädning</a></li>
-                    </ul>
-                </li>
-                <li><a class="nav-link" href="/omoss">Varför Välja Oss?</a></li>
-                <li><a class="nav-link" onClick="scrollToElement('checklist')">Checklista</a></li>
-                <li><a class="nav-link" href="/kontakt">Kontakta Oss</a></li>
+        <nav>
+            <img id="logo" src="./images/logo3.png" alt="logo">
+            <ul>
+                <li><a href="#home">Hem</a></li>
+                <li><a href="#services">Tjänster</a></li>
+                <li><a href="#services">Projekt</a></li>
+                <li><a href="#about">Om Oss</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
-            ## } end_if##	
-            ## } end_if##	
-
-            ##if_url_is_flytthjälp { ##	
-            ##if_url_is_priser { ##	
-            <ul class="nav-info-list">
-                <li style="color:#188bf6;">
-                    1.2 Miljoner <br>
-                    <span>Städade m2</span>
-                </li>
-
-                <li ></li>
-                    
-                <li style="color:#188bf6;">
-                    +15 700 <br>
-                    <span>Nöjda kunder</span>
-                </li>
-                <li style="color:#188bf6;">
-                    4.8 / 5 <br>
-                    <span>Kund betyg</span>
-                </li>
-                <li style="color:#188bf6;">
-                    +14 <br>
-                    <span>Års efarenhet</span>
-                </li>
-            </ul>
-            ## } end_if##	
-            ## } end_if##	
-
         </nav>
     </header>
 
-
-    ##if_url_is_not_priser { ##
-    ##if_url_is_not_thanks { ##
-    ##if_url_is_not_kontakt { ##
-    ##if_url_is_not_flytthjalp { ##
-    ##if_url_is_not_omoss { ##
-    ##if_url_is_not_avtal { ##
-    ##if_url_is_not_foretag { ##
-       
-
-    <div id="nav-scroll"></div>
-
     <!-- Landing Page -->
     <main id="home">
-        <div class="big-width-section">
-            <h1 id="landing-h1" class="landing-margin-left">##title_tag##</h1>
-            <h2 id="landing-h2" class="landing-margin-left-2">GRATIS FÖNSTERPUTS. <br> + HELA 15% RABATT <br> PÅ FLYTTSTÄDNINGEN</h2>
-            <p class="small-paragraph landing-margin-left-3">Om du även bokar flytthjälp.</p>
-            <div class="button-container landing-margin-left-4">
-                <a href="/priser" class="discount-button">
-                    <div class="btn-text white-color">SE PRISER <img class="btn-arrow-2" width="128" height="128" src="https://uploads.staticjw.com/tr/trappstadningistockholm/arrow.webp" alt="right arrow icon" loading="eager"></div>
-                    <div class="second-btn-text">SMIDIG ONLINEBOKNING</div>
-                </a>
-            </div>
-        </div>     
-        
-        <div class="small-width-section">
-            <img fetchpriority="high" id="landing-bg" class="background-image" src="https://uploads.staticjw.com/tr/trappstadningistockholm/bg.jpeg" alt="background-image" loading="eager" alt="header ##title_tag##">
-            <img fetchpriority="high" class="mobile-background-image" src="https://uploads.staticjw.com/tr/trappstadningistockholm/bg3.webp" alt="background-image" loading="eager" alt="header ##title_tag##">
-            <div id="mobile-overlay"></div>
-        </div>     
-    </main> 
-
-    <!-- END -->
-
-    <!-- REVIEW SECTION -->
-    <section id="reviews">
-        <img class="review-phone-left" src="https://uploads.staticjw.com/tr/trappstadningistockholm/667a7261a9ef862d6dcd99de.gif" alt="##title_tag## garanti" loading="lazy" width="128" height="128">
-
-        <div class="review-divider-outer-container">
-            <div class="review-divider-container">
-                <div class="review-block">
-                  <!--   <img class="five-stars-img" src="./images/5stars.gif" alt="5 stars"> -->
-                    <h2 id="review-h2-first"><img class="review-icon" src="https://uploads.staticjw.com/tr/trappstadningistockholm/review.webp" alt="review icon" loading="lazy">Betyg 4.7 / 5</h2>
-                    <p>967 Omdömen</p>
-                </div>
-
-                <div class="review-block">
-                    <h2><img class="review-icon" src="https://uploads.staticjw.com/tr/trappstadningistockholm/chat.webp" loading="lazy" alt="review icon" width="128" height="128">+18 000</h2>
-                    <p>Nöjda Kunder</p>
-                </div>
-
-                <div class="review-block">
-                    <h2><img class="review-icon" src="https://uploads.staticjw.com/tr/trappstadningistockholm/owl.webp" loading="lazy" alt="review icon" width="128" height="128">+13 Års</h2>
-                    <p>Efarenhet</p>
-                </div>
-            </div>
-        </div>  
-
-        <div class="review-text-container">
-           <h2 class="main-color review-header">VARMT VÄLKOMMEN!</h2> 
-           <p class="review-text">
-                Vi på Flyttstädning Stockholm™ hjälper dig gärna med allt
-                från att svara på frågor till att boka din flytt eller städning.
-                <br><br>
-                Övrig tid är du välkommen att kontakta oss via vårt kontaktformulär.
-                <br>
-                <span class="marked-text"><br>Vi svarar alltid på mail snarast möjligt inom 24 timmar.</span>
-            </p>
-
-            <div class="button-container">
-                <a href="contact.html" class="contact-button"><img class="btn-arrow" src="https://uploads.staticjw.com/tr/trappstadningistockholm/user.webp" alt="right arrow icon" loading="lazy">Kontakta Oss </a>
-            </div>
-        </div>
-
-        <h2 class="bottom-header">Hur fungerar det?</h2>
-        <img class="review-phone-right" src="https://uploads.staticjw.com/tr/trappstadningistockholm/667a741501d4bd82e3951058.gif" alt="##title_tag## högst betyg" loading="lazy">
-    </section>
-
-
-    <!-- INFO SECTION / HOW IT WORKS -->
-    <section id="info">
-        <img class="info-bg-img" src="https://uploads.staticjw.com/tr/trappstadningistockholm/flytt1-1.webp" alt="##title_tag## Omdöme">
-        <div class="info-container">
-            <div id="info-block-1" class="info-block">
-                <img class="info-block-img" src="https://uploads.staticjw.com/tr/trappstadningistockholm/why-us.jpg" alt="info block image" loading="lazy" alt="boka ##title_tag##">
-                <div>
-                    <h3>Steg 1</h3>
-                    <h4>Boka smidigt via vårt onlineformulär.</h4>
-                    <p>
-                         Du väljer allt från datum till nyckel info.
-                         <br>
-                         All nödvändig information finns i
-                         <br>
-                         formuläret när du bokar.
-                     </p>
-                </div>
+        <!-- Container -->
+            <div class="video-background">
+                <video id="background-video" autoplay loop muted>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="blurred-background"></div>
             </div>
 
-            <div id="info-block-2" class="info-block">
-                <img class="info-block-img" src="https://uploads.staticjw.com/tr/trappstadningistockholm/why-us.jpg" alt="info block image" loading="lazy" alt="##title_tag## pris">
-                <div>
-                    <h3>Steg 2</h3>
-                    <h4>Skriftlig bekräftelse på mailen.</h4>
-                    <p>
-                        Vi går igenom din bokning och när vi
-                        <br>
-                        bekräftar uppdraget får du en
-                        <br>
-                        automatisk bekräftelse via mailen.
-                    </p>    
-                </div>
+            <div class="centered-text-container">
+                <h1>Webbyrå i Stockholm</h1>
+                <p id="secondary-text">Vårat mål är att leverera snabba och billiga hemsidor med noll kompensation i kvalitén. </p>
             </div>
+    </main>
 
-            <div id="info-block-3" class="info-block">
-                <img class="info-block-img" src="https://uploads.staticjw.com/tr/trappstadningistockholm/why-us.jpg" alt="info block image" loading="lazy" alt="##title_tag## recensioner">
-                <div>
-                    <h3>Steg 3</h3>
-                    <h4>Se till att personalen kommer in.</h4>
-                    <p>
-                        Du behöver inte vara på plats under
-                        <br>
-                        städningen & självklart har du
-                        <br>
-                        garanti på städningen i hela 14 dagar.
-                    </p>  
-                </div>
-            </div>
-        </div>
-
-        <div class="button-container section-margin">
-            <a class="prices-button" href="/priser">
-                <div class="btn-text">SE PRISER <img class="btn-arrow-2" width="128" height="128" src="https://uploads.staticjw.com/tr/trappstadningistockholm/arrow.webp" alt="right arrow" loading="lazy"></div>
-                <div class="second-btn-text">SMIDIG ONLINEBOKNING</div>
-            </a>
-        </div>
-
-        ##content##
-
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section id="faq" class="centered-section" style="padding-bottom:0;">
-        <h3 class="centered-text">FAQ - Vanliga Frågor:</h3>
-        <div class="faq-container">
-            <div class="faq-item-container">
-                <div class="faq-item faq-box ">
-                    <div class="faq-question">Vad kostar en flyttstädning?</div>
-                    <div class="faq-answer">
-                        Vi håller ett fast pris baserat på bostadens m2. <br>
-                        Självklart kan du skräddarsy din flyttstädning med oss och bokar du även flytthjälp får du hela 15% rabatt på flyttstädningen. <br><br>
-                        <a href="/priser" class="faq-answer-link">SE PRISER HÄR.</a>
-                    </div>
-                </div>
-        
-                <div class="faq-item faq-box ">
-                    <div class="faq-question">Hur lång tid tar städningen?</div>
-                    <div class="faq-answer">Förutsatt att bostaden inte är onormalt ingrodd eller katastrof på något sätt, flyttstädar vi normalt ca: 1 timme / 10m2.</div>
-                </div>
-        
-                <div class="faq-item faq-box " style="margin-bottom:0;">
-                    <div class="faq-question">Hur gör jag med nyckel?</div>
-                    <div class="faq-answer">För oss spelar det inte så stor roll, bara vi kommer in.
-                        Du kan antingen möta personalen på plats, lämna olåst eller gömma en nyckel.
-                        <br><br>
-                        Vill du lämna en nyckel på vårt kontor behöver vi få den senast 3 dagar innan städdatum.</div>
+    <section id="services">
+        <div class="container">
+            <div class="half-section">
+                <div class="half-section-inner-div">
+                    <!-- H1 - Main Header -->
+                    <h2>Våra Tjänster</h2>
+                    <!-- Secondary Text - Description  -->
+                    <p class="small-text black-text">
+                        Vi erbjuder allt från nyskapande hemsidor eller uppdatering av eran befintliga hemsida till effektiv marknadsföring och sökmotoroptimering. 
+                        Kontakta oss för en heltäckande analys av eran hemsida och en kostnadsfri offert eller kontakta oss med erat behov så löser vi det. Välkommen!              
+                    </p>
                 </div>
             </div>
     
-            <div class="faq-item-container">
-                <div class="faq-item faq-box ">
-                    <div class="faq-question">Vad ingår i en flyttstädning?</div>
-                    <div class="faq-answer">Vi följer mäklarsamfundets riktlinjer.
-                        Vår flyttstädnings checklista beskriver vad som ingår rum för rum.<br><br>
+            <!-- Services section / what we have to offer -->
+            <div class="half-section">
+                <div class="services-container">
+                    <img class="icon" src="./images/icons/websiteIcon.png" alt="website icon"> 
+                    <div>
+                        <h3>Nya hemsidor</h3>
+                        <p>Vi skapar helt nya hemsidor med anpassad design efter erat behov.</p>   
                     </div>
                 </div>
-        
-                <div class="faq-item faq-box ">
-                    <div class="faq-question">Har ni städgaranti?</div>
-                    <div class="faq-answer">För din trygghet har vi självklart garanti på flyttstädningen.
-                        Städgarantin gäller i hela 14 dagar räknat med städdagen.
-                    </div>
-                </div>
-        
-                <div class="faq-item faq-box" style="margin-bottom:0;">
-                    <div class="faq-question">Behöver jag vara på plats?</div>
-                    <div class="faq-answer">Nej du behöver inte vara på plats under själva städningen och du behöver inte besikta om du inte har tid.
-                        <br><br>
-                        Dock uppskattar vi självklart om du kan komma och besikta städningen medans personalen fortfarande är på plats vilket underlättar för alla parter.</div>
-                </div>
-            </div>
-        </div>
-        <div class="button-container section-margin">
-            <a href="/priser" class="discount-button-2 green-btn">
-                <div class="btn-text white-color">SE PRISER <img class="btn-arrow-2" width="128" height="128" src="https://uploads.staticjw.com/tr/trappstadningistockholm/arrow.webp" alt="right arrow" loading="lazy"></div>
-                <div class="second-btn-text">SMIDIG ONLINEBOKNING</div>
-            </a>
-        </div>
-    </section> 
-
-    ## } end_if## 
-    ## } end_if## 
-    ## } end_if## 
-    ## } end_if## 
-    ## } end_if## 
-    ## } end_if## 
-    ## } end_if##
     
-    ##if_url_is_priser { ##
-        
-        ##content##
-
-    ## } else####if_url_is_flytthjalp { ##
-
-        ##content##
-
-    ## } else####if_url_is_omoss { ##
-
-        ##content##
-
-    ## } else####if_url_is_kontakt { ##
-
-        ##content##
-
-    ## } else####if_url_is_avtal { ##
-
-        ##content##
-
-    ## } else####if_url_is_thanks { ##
-        
-        ##content##
-
-    ## } end_if##
-
-
-    ##if_url_is_not_priser { ##
-    ##if_url_is_not_flytthjalp { ##
-    <footer id="footer">
-        <div class="footer-container centered-section">
-            <h2>Med Flyttstädning Stockholm™ är din bostad i trygga händer.</h2>
-            <!-- MAPS -->
-            <div class="map-container">
-                <div style="width: 100%; height:100%;"><iframe title="google maps" id="iframe" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Franz%C3%A9ngatan%2030+(Flytthj%C3%A4lp)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps systems</a></iframe></div>
-            </div>
-            <div class="footer-inner-container">
-                <div class="footer-text-section paragraph-2tv2o3MU1B text-output cparagraph-2tv2o3MU1B none noBorder radius0 none" data-animation-class="">
-                    <img class="footer-logo" src="https://uploads.staticjw.com/tr/trappstadningistockholm/logo_mail.webp" height="95" width="95" alt="##title_tag## logo" loading="lazy">
-                    <h2><strong>Flyttstädning<br>Stockholm™</strong></h2>
+                <div class="services-container">
+                    <img class="icon" src="./images/icons/refreshIcon.png" alt="web update icon">
+                    <div>
+                        <h3>Uppdatering av befintlig hemsida</h3>
+                        <p>Vi konverterar eran befintliga hemsida så den blir modern. Vi tar en titt på eran befintliga hemsida och sedan kommer vi överrens om vad som ska göras.</p>  
+                    </div>
                 </div>
-
-                <div class="footer-text-section">
-                    <h3>Kontakta Oss:</h3>
-                    <p><strong class="blue-color">Alla dagar:</strong> 08:00 - 17:00</p>
-                    <p><strong class="blue-color">Ring:</strong> 0105855800</p>
-                    <p><strong class="blue-color">Övrig tid:</strong> kontaktformulär</p>
-                    <p>Vi svarar snarast möjligt inom 24 timmar</p>
+    
+                <div class="services-container">
+                    <img class="icon" src="./images/icons/seoIcon.png" alt="seo icon">
+                    <div>
+                        <h3>Sökmotorsoptimering</h3>
+                        <p>Vi sökmotorsoptimerar eran hemsida efter den moderna standarden, vi höjer eran rankning på anpassade nyckelord efter erat behov.</p>
+                    </div>
                 </div>
-                <div class="footer-text-section">
-                    <h3>Intregritets Policy</h3>
-                    <a href="/avtal"><p class="blue-color">GDPR</p></a>
-                    <a href="/avtal"><p class="blue-color">Intregritets Policy</p></a>
-                    <a href="/avtal"><p class="blue-color">Avtal & Villkor</p></a>
-                    <br>
-                    <a href="/avtal"><p class="blue-color">Jobba Med Oss</p></a>
+    
+                <div class="services-container">
+                    <img class="icon" src="./images/icons/analyticsIcon.png" alt="seo icon">
+                    <div>
+                        <h3>Analysverktyg - Google Analytics 4 & Google Tag Manager</h3>
+                        <p>Vi lägger till analysverktyg som Google Analytics 4 och Google Tag Manager, vi kan även lägga in anpassade konverteringar efter erat behov.</p>
+                    </div>
                 </div>
-                <div class="footer-text-section">
-                    <h3>Om Oss</h3>
-                    <p><strong class="blue-color">Vi är din pålitliga partner för professionella flytt och städtjänster.</strong></p>
-                    <p>Med huvudkontor i Stockholm sträcker våra städtjänster sig över flera orter i hela Stor-Stockholm med omnejd.</p>
-                </div>
-            </div>
-
-            <div class="footer-bottom-container">
-                <p>
-                    ##copyright## <br>
-                    Orgnr: 559020-5133. Alla rättigheter förbehållna.
-                </p>
             </div>
         </div>
+    </section>
+
+    <section id="projects">
+
+    </section>
+
+    <section id="contact">
+        <div class="contact-form-container">
+            <form class="contact-form">
+                <h2>Kontakta Oss</h2>
+                <div class="form-group">
+                    <label for="name">Namn</label>
+                    <input type="text" id="name" name="name" required placeholder="Christian Johansson">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="test@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Meddelande</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Vi behöver en ny hemsida.."></textarea>
+                </div>
+                <button type="submit">Skicka</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <img class="logo-footer" src="./images/logo3.png" alt="logo3">
+        <p>&copy; CrispDesigns 2024. All rights reserved.</p>
+        <p><a href="#home">Hem</a> | <a href="#contact">Kontakta oss</a> | <a href="#portfolio">Portfolio</a></p>
     </footer>
-    ## } end_if##
-    ## } end_if##
 
+    <script src="functions.js"></script>
 </body>
-<script src='https://uploads.staticjw.com/tr/trappstadningistockholm/functionsv8.js'></script>
 </html>
-##statistics##
-
-
-
